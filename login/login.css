@@ -1,0 +1,36 @@
+
+#superior {
+    display: flex;
+    height: 200px;
+    background: rgb(135,224,253);
+    background: -moz-linear-gradient(top, rgba(135,224,253,1) 0%, rgba(255,255,255,1) 78%);
+    background: -webkit-linear-gradient(top, rgba(135,224,253,1) 0%,rgba(255,255,255,1) 78%);
+    background: linear-gradient(to bottom, rgba(135,224,253,1) 0%,rgba(255,255,255,1) 78%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#ffffff',GradientType=0 );
+}
+
+#title {
+    font-size: 40px;
+    margin-left: 26%;
+    font-family: "Calibri Light";
+    font-weight: lighter;
+}
+
+#help_img {
+    margin-left: 15%;
+    margin-top: 2.5%;
+    width:30px;
+    height:30px;
+}
+
+#inputs {
+    text-align: center;
+    margin: auto;
+}
+
+#forgot_password {
+    color: royalblue;
+    font-family: "Calibri";
+    font-size: 14px;
+    margin-right: 2.5%;
+}
