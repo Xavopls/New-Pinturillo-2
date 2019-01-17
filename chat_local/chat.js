@@ -2,9 +2,7 @@
 function sendMessage(){
     var element =document.createElement("div");
     element.setAttribute("id", "right_box");
-    //element.setAttribute("id", "dark");
-
-    element.className="msg rec"
+    element.className="container"
     element.innerHTML =input.value;
     document.querySelector("#chat").appendChild(element)
 
