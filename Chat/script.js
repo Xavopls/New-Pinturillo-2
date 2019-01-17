@@ -15,9 +15,11 @@ server.on_ready = function(id){
 
 //this methods receives messages from other users (author_id is an unique identifier per user)
 server.on_message = function( author_id, msg ){
- 	var element =document.createElement("div");
- 	element.className="msg rec"
- 	document.querySelector("#chat").appendChild(element)
+ 	var rec =document.createElement("div");
+ 	rec.className="msg rec"
+ 	rec.innerHTML =msg;
+ 	document.querySelector("#chat").appendChild(rec)
+ 	
 	
 	console.log("Nuevo mensage de"+author_id+": "+msg);
 }
@@ -40,7 +42,5 @@ var button = document.querySelector("#send");
 
 button.addEventListener("click",sendMessage);
 
-
-var server = new SillyClient(); //create our class
 
 
