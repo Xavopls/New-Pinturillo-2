@@ -1,9 +1,10 @@
-
-var nickname = '';
-var room='';
+var client= []
+client.nickname = '';
+client.room='';
+client.user_id='';
 /*
-var server = new SillyClient(); //create our class
-server.connect("ecv-esup.s.upf.edu:9000","");
+var server = new SillyClient(); //Crea instancia de servidor
+server.connect("ecv-esup.s.upf.edu:9000",""); //Primera conexion en blanco a servidor
 
 //Listado de las salas
 server.getReport( function(report) {
@@ -14,29 +15,27 @@ server.getReport( function(report) {
 		 }
 });
 
-
-
-var createroom = document.querySelector("#createroom");
-var set_createroom = document.querySelector("#set_createroom");
-
 //Entrar en una sala
-function entrar_room(nombre){
-	server = new SillyClient();
-	server.connect("ecv-esup.s.upf.edu:9000",nombre);
+function entrar_room(){
+	if(client.nickname!='' && client.room!='')
+	server = new SillyClient();//Sobreescribe servidor
+	server.connect("ecv-esup.s.upf.edu:9000",nombre); //Con una nueva conexion
 }
-
-button.addEventListener("click",sendMessage);
-
 
 
 //this method is called when the server accepts the connection (no ID yet nor info about the room)
 server.on_connect = function(){
   console.log("Connected to server! :)");
+
 };
 
 //this method is called when the server gives the user his ID (ready to start transmiting)
 server.on_ready = function(id){
-  console.log(id)
+  var user_id= id;
+	//aqui aniria cerrar el div
+
+	document.querySelector("#login").style.display="none";
+	document.querySelector("#login").style.display="inline";
 };
 
 
@@ -61,23 +60,21 @@ function sendMessage(){
 	//To send information to all the other users connected to the same room
 	server.sendMessage(msg);
 
-	document.querySelector("#chat").appendChild(element);
+	document.querySelector("#messages").appendChild(element);
 	input.value="";
 
 }
 
 
-
-
-
 var set_nickname = document.querySelector("#set_nickname");
 set_nickname.addEventListener("click",function(){
-	nickname=document.querySelector("#nickname").value;
+	client.nickname=document.querySelector("#nickname").value;
 });
 
 var set_createroom = document.querySelector("#set_createroom");
 set_createroom.addEventListener("click",function(){
-	room=document.querySelector("#createroom").value;
+	client.room=document.querySelector("#createroom").value;
+	entrar_room();
 });
 
 

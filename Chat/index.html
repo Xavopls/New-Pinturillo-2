@@ -7,6 +7,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <!--###################################### Primera pagina  ######################################-->
 		<div id="login" class="login_class">
 			<input id="nickname" placeholder="nickname"></input>
 			<button id="set_nickname" ></button>
@@ -14,25 +15,31 @@
 			<input id="createroom" placeholder="create room"></input>
 			<button id="set_createroom"></button>
 
-			<div id="list_rooms"> 
-
+			<div id="list_rooms">
 			</div>
+		</div>
 
+    <!--###################################### Segunda pagina  ######################################-->
+		<div id="room" style="display:none;">
+      <div id="users">
+      </div>
+
+      <canvas id="paint">
+      <canvas/>
+
+      <div id="messages">
+      </div>
+
+      <div id="my_message">
+        <input type="text"><input>
+        <button></button>
+      <div>
+
+      <div id="add">
+      </div>
 
 		</div>
 
-		<div id="room">
-
-
-
-		</div>
-
-
-
-		<h1>Messenger Live</h1>
-		<div id='chat'></div>
-		<input></input>
-		<button id="send"></button>
     <script src="sillyclient.js"></script>
 	 	<script src="script.js"></script>
 
