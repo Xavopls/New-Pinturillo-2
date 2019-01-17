@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19bed702-3ab2-4070-87fd-a888c3fbdca1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat_local/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat_local/chat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat_local/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/chat_local/chat.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,38 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login/login.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Exemples_classe/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat_local/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="171">
+              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -61,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat_local/chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="243">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -103,6 +77,7 @@
     <findStrings>
       <find>avatar_container</find>
       <find>flex</find>
+      <find>send</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,14 +94,15 @@
         <option value="$PROJECT_DIR$/login/login.js" />
         <option value="$PROJECT_DIR$/login/login.css" />
         <option value="$PROJECT_DIR$/login/login.html" />
+        <option value="$PROJECT_DIR$/chat_local/chat.html" />
         <option value="$PROJECT_DIR$/chat_local/chat.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-2" />
+    <option name="y" value="-3" />
     <option name="width" value="1920" />
-    <option name="height" value="1082" />
+    <option name="height" value="1083" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -143,6 +119,11 @@
             <path>
               <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
@@ -234,7 +215,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20849000" />
+    <option name="totallyTimeSpent" value="24404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,10 +270,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Exemples_classe/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="177">
           <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exemples_classe/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_local/chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_local/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
