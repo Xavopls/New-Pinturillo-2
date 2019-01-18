@@ -9,14 +9,15 @@ server.connect("ecv-esup.s.upf.edu:9000",""); //Primera conexion en blanco a ser
 //Listado de las salas
 server.getReport( function(report) {
 	 for(sala in report.rooms){
-		 var element = document.createElement("div");
+		 var element = document.createElement("option");
 		 element.innerHTML =sala;
-		 document.querySelector("#list_rooms").appendChild(element);
+		 element.value=sala;
+		 document.querySelector("#select_room").appendChild(element);
 		 }
 });
 
 //Entrar en una sala
-function entrar_room(){
+function join_room(){
 	if(client.nickname!='' && client.room!='')
 	server = new SillyClient();//Sobreescribe servidor
 	server.connect("ecv-esup.s.upf.edu:9000",nombre); //Con una nueva conexion
@@ -66,16 +67,25 @@ function sendMessage(){
 }
 
 
-var set_nickname = document.querySelector("#set_nickname");
-set_nickname.addEventListener("click",function(){
-	client.nickname=document.querySelector("#nickname").value;
-});
+
 
 var set_createroom = document.querySelector("#set_createroom");
 set_createroom.addEventListener("click",function(){
 	client.room=document.querySelector("#createroom").value;
-	entrar_room();
+	client.nickname=document.querySelector("#nickname").value;
+	join_room();
 });
+
+var join_room = document.querySelector("#join_room");
+join_room.addEventListener("click",function(){
+	//client.room llistar els check
+var select_room = document.getElementById("select_room");
+	client.room=	select_room.options[select_room.selectedIndex].value;
+	client.nickname=document.querySelector("#nickname").value;
+	join_room();
+});
+
+
 
 
 var input = document.querySelector("input");
