@@ -18,17 +18,11 @@ server.getReport( function(report) {
 
 //Entrar en una sala
 function join_room(){
-	if(client.nickname!='' && client.room!='')
-	server = new SillyClient();//Sobreescribe servidor
-	server.connect("ecv-esup.s.upf.edu:9000",nombre); //Con una nueva conexion
+	if(client.nickname!='' && client.room!=''){
+		server = new SillyClient();//Sobreescribe servidor
+		server.connect("ecv-esup.s.upf.edu:9000",nombre); //Con una nueva conexion
+	}
 }
-
-
-//this method is called when the server accepts the connection (no ID yet nor info about the room)
-server.on_connect = function(){
-  console.log("Connected to server! :)");
-
-};
 
 //this method is called when the server gives the user his ID (ready to start transmiting)
 server.on_ready = function(id){
@@ -38,7 +32,6 @@ server.on_ready = function(id){
 	document.querySelector("#login").style.display="none";
 	document.querySelector("#login").style.display="inline";
 };
-
 
 //this methods receives messages from other users (author_id is an unique identifier per user)
 server.on_message = function( author_id, msg ){
@@ -50,7 +43,6 @@ server.on_message = function( author_id, msg ){
 	console.log("Nuevo mensage de"+author_id+": "+msg);
 }
 */
-
 
 function sendMessage(){
 	var element = document.createElement("div");
@@ -78,14 +70,11 @@ set_createroom.addEventListener("click",function(){
 
 var join_room = document.querySelector("#join_room");
 join_room.addEventListener("click",function(){
-	//client.room llistar els check
-var select_room = document.getElementById("select_room");
+	var select_room = document.getElementById("select_room");
 	client.room=	select_room.options[select_room.selectedIndex].value;
 	client.nickname=document.querySelector("#nickname").value;
 	join_room();
 });
-
-
 
 
 var input = document.querySelector("input");
