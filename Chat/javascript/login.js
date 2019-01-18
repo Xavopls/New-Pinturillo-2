@@ -2,6 +2,7 @@ var client= []
 client.nickname = '';
 client.room='';
 client.user_id='';
+
 /*
 var server = new SillyClient(); //Crea instancia de servidor
 server.connect("ecv-esup.s.upf.edu:9000",""); //Primera conexion en blanco a servidor
@@ -44,21 +45,6 @@ server.on_message = function( author_id, msg ){
 }
 */
 
-function sendMessage(){
-	var element = document.createElement("div");
-	element.innerHTML =input.value;
-	element.className="msg me"
-	var msg=input.value;
-
-	//To send information to all the other users connected to the same room
-	server.sendMessage(msg);
-
-	document.querySelector("#messages").appendChild(element);
-	input.value="";
-
-}
-
-
 
 
 var set_createroom = document.querySelector("#set_createroom");
@@ -75,9 +61,3 @@ join_room.addEventListener("click",function(){
 	client.nickname=document.querySelector("#nickname").value;
 	join_room();
 });
-
-
-var input = document.querySelector("input");
-var button = document.querySelector("#send");
-
-button.addEventListener("click",sendMessage);
