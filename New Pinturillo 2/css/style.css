@@ -79,7 +79,12 @@ h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 65px; fo
 	line-height: 150%;
 	height: 200px;
 }
-#general_container {
+#login_page_container {
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+#game_page_container {
 	margin-left: 30%;
 	margin-right: 30%;
 }
