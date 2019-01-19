@@ -1,9 +1,7 @@
-
-
 var color='black';
 var size=5;
 var circle;
-
+/*
 function Circle (x,y){
 	this.x=x
 	this.y=y
@@ -31,7 +29,7 @@ function drawFrame(){
 
 	requestAnimationFrame(drawFrame); //Per demanarli al Chrome que requereixi aquesta funcio per cada refresh. La funcio es passa sense els ()
 }
-
+*/
 //Seleccion de colores
 var colors = document.querySelector("#colors");
 colors.addEventListener("click", setColors);
@@ -48,10 +46,11 @@ slider.oninput = function() {
   size = this.value;
 }
 
-
+/*
 var canvas =document.querySelector("canvas");
 	canvas.addEventListener("mousemove",function(evt){
 	createCircle(canvas,event);
 });
 
 drawFrame();
+*/

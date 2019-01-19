@@ -17,21 +17,39 @@
     <div>
         <label id="nick_label">Nickname</label>
 
-        <input name="p" required="required" id="nick_input" />
+        <input name="p" required="required" id="nickname" />
 
         <div id="input_container" class="row">
             <div class="column" id="left_column">
-                <button type="submit" class="btn btn-primary btn-block btn-large" id="create_room">Create room</button>
+                <button type="submit" class="btn btn-primary btn-block btn-large" id="set_createroom">Create room</button>
             </div>
             <div class="column" id="right_column">
                 <button type="submit" class="btn btn-primary btn-block btn-large" id="join_room">Join room</button>
+
+                <section class="container">
+                    <div class="dropdown">
+                        <select name="one" class="dropdown-select" id="select_room">
+                            <option value="">Select…</option>
+                            <option value="1">Option #1</option>
+                            <option value="2">Option #2</option>
+                            <option value="3">Option #3</option>
+                        </select>
+                    </div>
+                </section>
             </div>
         </div>
 </div>
-  
-  
 
-    <script  src="js/index.js"></script>
+
+
+
+
+
+            <script  src="js/login.js"></script>
+
+
+
+
 
 
 
