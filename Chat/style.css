@@ -445,3 +445,19 @@ h1 {
 .content {
 	padding: 1em;
 }
+
+#black {
+  background: black !important ;
+}
+#blue {
+  background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%) ;
+}
+#green {
+  background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+}
+#red {
+  background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+}
+#yellow {
+  background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);
+}

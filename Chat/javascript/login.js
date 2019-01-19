@@ -22,6 +22,7 @@ function join_room(){
 	if(client.nickname!='' && client.room!=''){
 		server = new SillyClient();//Sobreescribe servidor
 		server.connect("ecv-esup.s.upf.edu:9000",nombre); //Con una nueva conexion
+
 	}
 }
 
@@ -32,6 +33,7 @@ server.on_ready = function(id){
 
 	document.querySelector("#login").style.display="none";
 	document.querySelector("#login").style.display="inline";
+
 };
 
 //this methods receives messages from other users (author_id is an unique identifier per user)
@@ -44,7 +46,6 @@ server.on_message = function( author_id, msg ){
 	console.log("Nuevo mensage de"+author_id+": "+msg);
 }
 */
-
 
 
 var set_createroom = document.querySelector("#set_createroom");
