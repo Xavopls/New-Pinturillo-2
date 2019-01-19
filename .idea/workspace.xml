@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19bed702-3ab2-4070-87fd-a888c3fbdca1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chat/javascript/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Chat/javascript/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chat/javascript/pinturillo.js" beforeDir="false" afterPath="$PROJECT_DIR$/Chat/javascript/pinturillo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login Page/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Login Page/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login Page/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login Page/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login Page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Login Page/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,41 +23,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chat/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1541">
-              <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Login Page/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
+            <state relative-caret-position="371">
+              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Login Page/js/dropdown.js">
+        <entry file="file://$PROJECT_DIR$/Login Page/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="299">
+              <caret line="48" column="53" lean-forward="true" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Login Page/index_FE.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Login Page/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="578">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
@@ -68,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Chat/javascript/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
+            <state relative-caret-position="1242">
               <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
             </state>
           </provider>
@@ -90,13 +75,30 @@
       <find>avatar_container</find>
       <find>flex</find>
       <find>row</find>
-      <find>title</find>
-      <find>#</find>
       <find>create_room</find>
       <find>script</find>
       <find>dark</find>
       <find>set</find>
+      <find>nick_label</find>
+      <find>right</find>
       <find>container</find>
+      <find>nickname</find>
+      <find>createroom_label</find>
+      <find>createroom_input</find>
+      <find>right_co</find>
+      <find>input_Co</find>
+      <find>createroom_cointainer</find>
+      <find>left</find>
+      <find>input_container</find>
+      <find>select_room</find>
+      <find>input</find>
+      <find>createroom</find>
+      <find>#</find>
+      <find>set_createroom</find>
+      <find>createroom_in</find>
+      <find>join</find>
+      <find>title</find>
+      <find>label</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,8 +118,12 @@
         <option value="$PROJECT_DIR$/login-form/index.html" />
         <option value="$PROJECT_DIR$/login-form/css/style.css" />
         <option value="$PROJECT_DIR$/Login Page/js/dropdown.js" />
-        <option value="$PROJECT_DIR$/Login Page/css/style.css" />
         <option value="$PROJECT_DIR$/Login Page/index_FE.html" />
+        <option value="$PROJECT_DIR$/Login Page/js/particles.js" />
+        <option value="$PROJECT_DIR$/Login Page/js/models/particles.json" />
+        <option value="$PROJECT_DIR$/Login Page/js/login.js" />
+        <option value="$PROJECT_DIR$/Login Page/index.html" />
+        <option value="$PROJECT_DIR$/Login Page/css/style.css" />
       </list>
     </option>
   </component>
@@ -157,6 +163,18 @@
               <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
               <item name="Login Page" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
+              <item name="Login Page" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
+              <item name="Login Page" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -195,7 +213,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index_FE.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
     <configuration name="index_FE.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Old-School-Messenger/Login Page/index_FE.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -220,9 +238,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="JavaScript Debug.index_FE.html" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="JavaScript Debug.login.html (1)" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
       </list>
@@ -242,12 +260,12 @@
       <workItem from="1547508482185" duration="6419000" />
       <workItem from="1547572645359" duration="9852000" />
       <workItem from="1547747360772" duration="5637000" />
-      <workItem from="1547920513775" duration="4231000" />
+      <workItem from="1547920513775" duration="8083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30445000" />
+    <option name="totallyTimeSpent" value="34297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -260,13 +278,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.1264489" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.1264489" />
       <window_info id="Structure" order="1" sideWeight="0.50083196" side_tool="true" weight="0.17913593" />
       <window_info id="Favorites" order="2" sideWeight="0.50083196" side_tool="true" weight="0.17913593" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32998884" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -361,31 +378,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login-form/index.html" />
     <entry file="file://$PROJECT_DIR$/login-form/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/Login Page/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login Page/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Login Page/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chat/javascript/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -399,24 +397,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Login Page/index_FE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chat/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1541">
-          <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+        <state relative-caret-position="161">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chat/javascript/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login Page/js/models/particles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login Page/js/particles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login Page/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login Page/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="48" column="53" lean-forward="true" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Login Page/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login Page/index_FE.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state relative-caret-position="371">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
         </state>
       </provider>
     </entry>

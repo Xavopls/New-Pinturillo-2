@@ -13,6 +13,9 @@
 
 html { width: 100%; height:100%; overflow:hidden; }
 
+h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 65px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+
+
 .column {
 	float: left;
 	width: 50%;
@@ -30,21 +33,50 @@ html { width: 100%; height:100%; overflow:hidden; }
 }
 
 #left_column {
+	margin-top: 1%;
 	padding-left: 5%;
 	padding-right: 5%;
  }
 #nick_label {
 	color: white;
 	font-size: 30px;
-	margin-left: 39%;
+	display: block;
+	text-align: center;
+	line-height: 150%;
 }
-
-#nick_input {
+#nickname{
 	margin-top: 5%;
 
 }
+
+#createroom {
+	margin-top: 5%;
+	margin-bottom: 13%;
+}
+
+#nick_input {
+	margin-top: 6%;
+}
+
+#roomname_label {
+	display: block;
+	text-align: center;
+	line-height: 150%;
+	color: white;
+	font-size: 15px;
+}
+
+#roomlist_label {
+	display: block;
+	text-align: center;
+	line-height: 150%;
+	color: white;
+	font-size: 15px;
+}
 #title_label {
-	margin-left: 43.5%;
+	display: block;
+	text-align: center;
+	line-height: 150%;
 	height: 200px;
 }
 #general_container {
@@ -53,8 +85,9 @@ html { width: 100%; height:100%; overflow:hidden; }
 }
 
 #input_container {
-	margin-top: 10%;
+	margin-top: 12%;
 }
+
 body { 
 	width: 100%;
 	height:100%;
@@ -99,8 +132,15 @@ input {
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
 
+#dropdown_rooms {
+	margin-top: 7%
+}
 
+#createroom_cointainer {
 
+	margin-bottom: 10%;
+
+}
 
 /*
  * Copyright (c) 2012-2013 Thibaut Courouble
@@ -113,14 +153,13 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 
 .container {
-	margin: 50px auto;
+	margin-bottom: 15%;
 	margin-right: 0%;
 	text-align: center;
 }
 
 .container > .dropdown {
-	margin: 0 0px;
-	vertical-align: top;
+
 }
 
 .dropdown {

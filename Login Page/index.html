@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1 id="title_label">New Pinturillo</h1>
+    <h1 id="title_label">New Pinturillo 2</h1>
     <div id="general_container">
 
 
@@ -21,12 +21,19 @@
 
         <div id="input_container" class="row">
             <div class="column" id="left_column">
-                <button type="submit" class="btn btn-primary btn-block btn-large" id="set_createroom">Create room</button>
+                <div id="createroom_cointainer">
+                    <label id="roomname_label">Room name</label>
+
+                    <input name="p" required="required" id="createroom"  />
+                    <button type="submit" class="btn btn-primary btn-block btn-large" id="set_createroom">Create room</button>
+
+                </div>
+
             </div>
             <div class="column" id="right_column">
-                <button type="submit" class="btn btn-primary btn-block btn-large" id="join_room">Join room</button>
+                <label id="roomlist_label">Room list</label>
 
-                <section class="container">
+                <section class="container" id="dropdown_rooms">
                     <div class="dropdown">
                         <select name="one" class="dropdown-select" id="select_room">
                             <option value="">Select…</option>
@@ -36,24 +43,14 @@
                         </select>
                     </div>
                 </section>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large" id="join_room">Join room</button>
+
+
             </div>
         </div>
 </div>
-
-
-
-
-
-
-            <script  src="js/login.js"></script>
-
-
-
-
-
-
-
-
+        <script  src="js/login.js"></script>
 </body>
 
 </html>
