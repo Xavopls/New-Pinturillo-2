@@ -38,6 +38,7 @@ document.keypress(function(e) {
     }
 });
 
+
 var send_message = document.querySelector("#send");
 
 send_message.addEventListener("click",sendMessage);
