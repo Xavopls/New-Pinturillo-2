@@ -9,6 +9,9 @@ server.on_message = function( author_id, msg ){
  	rec.innerHTML =msg;
  	document.querySelector("#chat").appendChild(rec)
 
+	var audio = document.querySelector('#myAudio');
+	audio.play()
+
 	console.log("Nuevo mensage de"+author_id+": "+msg);
 }
 */
@@ -17,7 +20,7 @@ server.on_message = function( author_id, msg ){
 function sendMessage(){
 
 	var input = document.querySelector("#message");
-	var element = document.createElement("div");
+	var element = document.createElement('p');
 
 	element.innerHTML =input.value;
 	element.className="my message"
@@ -26,19 +29,19 @@ function sendMessage(){
 	//To send information to all the other users connected to the same room
 	//server.sendMessage(msg);
 
-	document.querySelector("#my_messages").appendChild(element);
+	document.querySelector("#messages").appendChild(element);
+	
+	var messages = document.querySelector('#messages');
+	messages.scrollTop = messages.scrollHeight;
+	
 	input.value="";
-
 }
 
-document.keypress(function(e) {
-    var keycode = (e.keyCode ? e.keyCode : e.which);
-    if (keycode == '13') {
-        sendMessage
+
+var input_message = document.querySelector('#message')
+input_message-addEventListener("keypress", function (evt) {
+
+    if (evt.keyCode == '13'){
+      sendMessage();
     }
-});
-
-
-var send_message = document.querySelector("#send");
-
-send_message.addEventListener("click",sendMessage);
+})

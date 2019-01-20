@@ -81,40 +81,24 @@
                 <button id="red" class=""></button>
                 <button id="yellow" class=""></button>
             </div>
+            <input id="slider" type="range" min="1" max="10" step="1" value="3" />
+
         </div>
     </div>
     <div id ="right_column_game" class="column_chat">
         <p>CHAT</p>
         <div id="chat">
+            <audio id="myAudio">
+                <source src="assets/new_message.mp3" type="audio/mp3">
+            </audio>
             <div id="messages" class="container darker">
                 <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
-                <p>Message Test</p>
+                
 
             </div>
             <div id="input_chat" class="row">
                 <div id="left_column_chat" class="column_chat">
                     <input id="message" type="text"></input>
-                </div>
-                <div id="right_column_chat" class="column_chat">
-                    <button id="send" class="btn btn-primary btn-block btn-large">Send</button>
                 </div>
             </div>
 
@@ -163,8 +147,10 @@
 
 
 
+    <script src="js/sillyclient.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/chat.js"></script>
 
-    <script  src="js/login.js"></script>
 </body>
 
 </html>
