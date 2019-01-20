@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19bed702-3ab2-4070-87fd-a888c3fbdca1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Chat/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/assets/new_message.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/assets/sound/new_message.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New Pinturillo 2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,20 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="268">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+            <state relative-caret-position="238">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="37" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -96,7 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login</find>
       <find>login_</find>
       <find>colors</find>
       <find>game_page</find>
@@ -126,6 +120,7 @@
       <find>right_column_chat</find>
       <find>new_</find>
       <find>incoming_msg_img</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -207,7 +202,8 @@
             <path>
               <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="New Pinturillo 2" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,12 +294,12 @@
       <workItem from="1547920513775" duration="11918000" />
       <workItem from="1547951523029" duration="599000" />
       <workItem from="1547985350596" duration="8859000" />
-      <workItem from="1548011886420" duration="4448000" />
+      <workItem from="1548011886420" duration="4690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52038000" />
+    <option name="totallyTimeSpent" value="52280000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,20 +473,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="268">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="238">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
