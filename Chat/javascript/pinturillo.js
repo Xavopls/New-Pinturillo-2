@@ -1,3 +1,5 @@
+
+
 var color='black';
 var size=5;
 var circle;
@@ -16,20 +18,20 @@ function createCircle(body,e){
   this.color=color
 	myCirclearray.push(circle);
 }
-
+*/
+var background = new Image();
+background.src = "./images/canvas_background.PNG";
 
 function drawFrame(){
 	var canvas = document.querySelector("canvas");
 	var ctx = canvas.getContext("2d");
 	ctx.clearRect(0,0,canvas.width, canvas.height);
+	ctx.drawImage(background,0,0)
 
-	for(var circle of myCirclearray){ //OJU, IMPORTANT! Si es posa "in" pilla lindex, si es posa "of" pilla lobjecte
-		circle.draw(ctx);
-	}
 
 	requestAnimationFrame(drawFrame); //Per demanarli al Chrome que requereixi aquesta funcio per cada refresh. La funcio es passa sense els ()
 }
-*/
+
 //Seleccion de colores
 var colors = document.querySelector("#colors");
 colors.addEventListener("click", setColors);
@@ -51,6 +53,6 @@ var canvas =document.querySelector("canvas");
 	canvas.addEventListener("mousemove",function(evt){
 	createCircle(canvas,event);
 });
+*/
 
 drawFrame();
-*/

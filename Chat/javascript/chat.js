@@ -31,12 +31,7 @@ function sendMessage(){
 
 }
 
-document.keypress(function(e) {
-    var keycode = (e.keyCode ? e.keyCode : e.which);
-    if (keycode == '13') {
-        sendMessage
-    }
-});
+
 
 
 var send_message = document.querySelector("#send");
