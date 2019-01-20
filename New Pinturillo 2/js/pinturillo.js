@@ -6,8 +6,12 @@ var positionY;
 
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
+var background = new Image();
+background.src = "./assets/img/canvas_background.PNG";
+
 
 function draw_pointer(){
+	ctx.drawImage(background,0,0)
 	ctx.beginPath();
   ctx.arc(positionX, positionY, size, 0, 2 * Math.PI, true);
   ctx.fillStyle = color;
