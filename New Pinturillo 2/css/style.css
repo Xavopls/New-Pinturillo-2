@@ -20,17 +20,49 @@ h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 65px; fo
 	float: left;
 	width: 50%;
 }
-.column_3 {
+
+.column_chat {
 	float: left;
-	width: 33.33%;
+	width: 25%;
 }
 
+.column_canvas {
+	float: left;
+	width: 55%;
+}
+.column_players {
+	float: left;
+	width: 20%;
+}
 .row:after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
+#canvas_image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#player_list {
+	text-align: center;
+  }
+
+#player_list_header {
+	text-align: center;
+margin-bottom: 40%;
+}
+#canvas_container {
+	background: white;
+	margin-right: 10%;
+}
+
+#left_column_chat {
+	width: 75%;
+}
 #right_column {
 	padding-left: 5%;
 	padding-right: 5%;
@@ -61,7 +93,14 @@ h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 65px; fo
 #nick_input {
 	margin-top: 6%;
 }
+#messages {
+	overflow-y: auto;
+	height: 500px;
+	text-align: left;
+}
 
+#mid_column_game {
+}
 #roomname_label {
 	display: block;
 	text-align: center;

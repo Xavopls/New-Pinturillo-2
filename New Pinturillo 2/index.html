@@ -51,25 +51,76 @@
 
 <div id="game_page_container" class="row">
 
-    <div id ="left_column_game" class="column_3">
-        <div id="ad">
-        <p>AD</p>
+    <div id ="left_column_game" class="column_players">
+
+        <div id="player_list_header">
+            <p>PLAYER LIST</p>
+        </div>
+        <div id="player_list">
+            <p>PLAYER 1</p>
+            <p>PLAYER 2</p>
+            <p>PLAYER 3</p>
+            <p>PLAYER 4</p>
+            <p>PLAYER 5</p>
+            <p>PLAYER 6</p>
         </div>
     </div>
-    <div id ="mid_column_game" class="column_3">
-        <div id="paint">
-            <p>CANVAS</p>
+    <div id ="mid_column_game" class="column_canvas">
+        <p>CANVAS</p>
+
+        <div id="canvas_container">
+            <img src="assets/img/canvas_background.PNG" id="canvas_image">
+
         </div>
         <div id="tools">
             <p>TOOLS</p>
+            <div id="colors">
+                <button id="black" class=""></button>
+                <button id="blue" class=""></button>
+                <button id="green" class=""></button>
+                <button id="red" class=""></button>
+                <button id="yellow" class=""></button>
+            </div>
         </div>
     </div>
-    <div id ="right_column_game" class="column_3">
-        <div id="player_list">
-            <p>PLAYER LIST</p>
-        </div>
+    <div id ="right_column_game" class="column_chat">
+        <p>CHAT</p>
         <div id="chat">
-            <p>CHAT</p>
+            <div id="messages" class="container darker">
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+                <p>Message Test</p>
+
+            </div>
+            <div id="input_chat" class="row">
+                <div id="left_column_chat" class="column_chat">
+                    <input id="message" type="text"></input>
+                </div>
+                <div id="right_column_chat" class="column_chat">
+                    <button id="send" class="btn btn-primary btn-block btn-large">Send</button>
+                </div>
+            </div>
+
+
+        </div>
+
         </div>
     </div>
 
