@@ -325,3 +325,9 @@ canvas{
 	-moz-box-shadow: 5px -5px 0px 0px rgba(196,196,196,1);
 	box-shadow: 5px -5px 0px 0px rgba(196,196,196,1);
 }
+
+h1{
+	font-family: 'Indie Flower', cursive;
+	color: #f2f2f2;
+
+}
