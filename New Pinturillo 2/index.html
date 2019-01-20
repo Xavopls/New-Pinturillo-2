@@ -11,9 +11,12 @@
 <body>
 
 <!--######################################  LOGIN PAGE  ######################################-->
+<video id="video_title" playsinline autoplay muted loop>
+    <source src="assets/video/title.webm" type="video/webm">
+    Your browser does not support the video tag
+</video>
 
 <div id="login_page_container">
-    <h1 id="title_label">New Pinturillo 2</h1>
         <div>
             <label id="nick_label">Nickname</label>
             <input name="p" required="required" id="nickname" />
@@ -46,8 +49,67 @@
 
 <!--######################################  GAME PAGE  ######################################-->
 
-<div id="game_page_container">
+<div id="game_page_container" class="row">
+
+    <div id ="left_column_game" class="column_3">
+        <div id="ad">
+        <p>AD</p>
+        </div>
+    </div>
+    <div id ="mid_column_game" class="column_3">
+        <div id="paint">
+            <p>CANVAS</p>
+        </div>
+        <div id="tools">
+            <p>TOOLS</p>
+        </div>
+    </div>
+    <div id ="right_column_game" class="column_3">
+        <div id="player_list">
+            <p>PLAYER LIST</p>
+        </div>
+        <div id="chat">
+            <p>CHAT</p>
+        </div>
+    </div>
+
 </div>
+
+
+
+<!--
+    <div id="room">
+
+        <div id="users">
+        </div>
+
+        <canvas id="paint"  width="667" height="432"></canvas>
+
+        <div id="colors">
+            <button id="black"></button>
+            <button id="blue"></button>
+            <button id="green"></button>
+            <button id="red"></button>
+            <button id="yellow"></button>
+        </div>
+        <input id="slider" type="range" min="1" max="10" step="1" value="3" />
+
+        <div id="messages">
+        </div>
+
+        <div id="chat">
+            <div id="my_messages">
+            </div>
+            <input id="message" type="text"></input>
+            <button id="send"></button>
+        </div>
+
+        <div id="add">
+        </div>
+
+    </div>
+    -->
+
 
 
 
