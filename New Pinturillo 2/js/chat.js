@@ -1,5 +1,3 @@
-
-
 /*
 server.on_message = function( author_id, msg ){
 
@@ -17,31 +15,31 @@ server.on_message = function( author_id, msg ){
 */
 
 
-function sendMessage(){
+function sendMessage() {
 
 	var input = document.querySelector("#message");
 	var element = document.createElement('p');
 
-	element.innerHTML ='<b>You: </b>'+input.value;
-	element.className="my message"
-	var msg=input.value;
+	element.innerHTML = '<b>You: </b>' + input.value;
+	element.className = "my message"
+	var msg = input.value;
 
 	//To send information to all the other users connected to the same room
 	//server.sendMessage(msg);
 
 	document.querySelector("#messages").appendChild(element);
-	
+
 	var messages = document.querySelector('#messages');
 	messages.scrollTop = messages.scrollHeight;
-	
-	input.value="";
+
+	input.value = "";
 }
 
 
 var input_message = document.querySelector('#message')
-input_message-addEventListener("keypress", function (evt) {
+input_message - addEventListener("keypress", function (evt) {
 
-    if (evt.keyCode == '13'){
-      sendMessage();
-    }
+	if (evt.keyCode == '13') {
+		sendMessage();
+	}
 })

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>New Pinturillo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-<!--######################################  LOGIN PAGE  ######################################-->
-<video id="video_title" playsinline autoplay muted loop>
-    <source src="assets/video/title.webm" type="video/webm">
-    Your browser does not support the video tag
-</video>
+    <!--######################################  LOGIN PAGE  ######################################-->
+    <video id="video_title" playsinline autoplay muted loop>
+        <source src="assets/video/title.webm" type="video/webm">
+        Your browser does not support the video tag
+    </video>
 
-<div id="login_page_container">
+    <div id="login_page_container">
         <div>
             <label id="nick_label">Nickname</label>
             <input name="p" required="required" id="nickname" />
@@ -24,8 +24,9 @@
                 <div class="column" id="left_column">
                     <div id="createroom_cointainer">
                         <label id="roomname_label">Room name</label>
-                        <input name="p" required="required" id="createroom"  />
-                        <button type="submit" class="btn btn-primary btn-block btn-large" id="set_createroom"><b>Create room</b></button>
+                        <input name="p" required="required" id="createroom" />
+                        <button type="submit" class="btn btn-primary btn-block btn-large" id="set_createroom"><b>Create
+                                room</b></button>
                     </div>
                 </div>
                 <div class="column" id="right_column">
@@ -47,73 +48,72 @@
     </div>
 
 
-<!--######################################  GAME PAGE  ######################################-->
+    <!--######################################  GAME PAGE  ######################################-->
 
-<div id="game_page_container" class="row">
+    <div id="game_page_container" class="row">
 
-    <div id ="left_column_game" class="column_players">
+        <div id="left_column_game" class="column_players">
 
-        <div id="player_list_header">
-            <p>PLAYER LIST</p>
-        </div>
-        <div id="player_list">
-            <p>PLAYER 1</p>
-            <p>PLAYER 2</p>
-            <p>PLAYER 3</p>
-            <p>PLAYER 4</p>
-            <p>PLAYER 5</p>
-            <p>PLAYER 6</p>
-        </div>
-    </div>
-    <div id ="mid_column_game" class="column_canvas">
-        <p>CANVAS</p>
-
-        <div id="canvas_container">
-            <canvas id="paint"  width="667" height="432"></canvas>
-           
-
-        </div>
-        <div id="tools">
-            <p>TOOLS</p>
-            <div id="colors">
-                <button id="black" class=""></button>
-                <button id="blue" class=""></button>
-                <button id="green" class=""></button>
-                <button id="red" class=""></button>
-                <button id="yellow" class=""></button>
+            <div id="player_list_header">
+                <p>PLAYER LIST</p>
             </div>
-            <input id="slider" type="range" min="1" max="40" step="1" value="1" />
-
+            <div id="player_list">
+                <p>PLAYER 1</p>
+                <p>PLAYER 2</p>
+                <p>PLAYER 3</p>
+                <p>PLAYER 4</p>
+                <p>PLAYER 5</p>
+            </div>
         </div>
-    </div>
-    <div id ="right_column_game" class="column_chat">
-        <p>CHAT</p>
-        <div id="chat">
-            <audio id="myAudio">
-                <source src="assets/new_message.mp3" type="audio/mp3">
-            </audio>
-            <div id="messages" class="container darker">
-                <p>Message Test</p>
-                
+        <div id="mid_column_game" class="column_canvas">
+            <p>CANVAS</p>
+
+            <div id="canvas_container">
+                <canvas id="paint" width="667" height="432"></canvas>
+
 
             </div>
-            <div id="input_chat" class="row">
-                <div id="left_column_chat" class="column_chat">
-                    <input id="message" type="text"></input>
+            <div id="tools">
+                <p>TOOLS</p>
+                <div id="colors">
+                    <button id="black" class=""></button>
+                    <button id="blue" class=""></button>
+                    <button id="green" class=""></button>
+                    <button id="red" class=""></button>
+                    <button id="yellow" class=""></button>
                 </div>
+                <input id="slider" type="range" min="1" max="40" step="1" value="1" />
+
             </div>
-
-
         </div>
+        <div id="right_column_game" class="column_chat">
+            <p>CHAT</p>
+            <div id="chat">
+                <audio id="myAudio">
+                    <source src="assets/new_message.mp3" type="audio/mp3">
+                </audio>
+                <div id="messages" class="container darker">
+                    <p>Message Test</p>
+
+
+                </div>
+                <div id="input_chat" class="row">
+                    <div id="left_column_chat" class="column_chat">
+                        <input id="message" type="text"></input>
+                    </div>
+                </div>
+
+
+            </div>
 
         </div>
     </div>
 
-</div>
+    </div>
 
 
 
-<!--
+    <!--
     <div id="room">
 
         <div id="users">

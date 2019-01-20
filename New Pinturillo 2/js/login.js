@@ -1,7 +1,7 @@
-var client= []
+var client = []
 client.nickname = '';
-client.room='';
-client.user_id='';
+client.room = '';
+client.user_id = '';
 
 /*
 var server = new SillyClient(); //Crea instancia de servidor
@@ -40,16 +40,16 @@ server.on_ready = function(id){
 
 
 var set_createroom = document.querySelector("#set_createroom");
-set_createroom.addEventListener("click",function(){
-	client.room=document.querySelector("#createroom").value;
-	client.nickname=document.querySelector("#nickname").value;
+set_createroom.addEventListener("click", function () {
+	client.room = document.querySelector("#createroom").value;
+	client.nickname = document.querySelector("#nickname").value;
 	join_room();
 });
 
 var join_room = document.querySelector("#join_room");
-join_room.addEventListener("click",function(){
+join_room.addEventListener("click", function () {
 	var select_room = document.getElementById("select_room");
-	client.room=	select_room.options[select_room.selectedIndex].value;
-	client.nickname=document.querySelector("#nickname").value;
+	client.room = select_room.options[select_room.selectedIndex].value;
+	client.nickname = document.querySelector("#nickname").value;
 	join_room();
 });
