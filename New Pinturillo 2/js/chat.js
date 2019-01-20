@@ -31,7 +31,8 @@ function sendMessage() {
 
 	var messages = document.querySelector('#messages');
 	messages.scrollTop = messages.scrollHeight;
-
+	var audio = document.querySelector('#myAudio');
+	audio.play();
 	input.value = "";
 }
 

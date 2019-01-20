@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19bed702-3ab2-4070-87fd-a888c3fbdca1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Chat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/assets/new_message.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/assets/sound/new_message.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New Pinturillo 2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,21 +30,28 @@
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/assets/img/canvas_background.PNG">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="897">
+              <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="268">
+              <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -48,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+            <state relative-caret-position="744">
+              <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -66,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Chat/javascript/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
+            <state relative-caret-position="790">
               <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
             </state>
           </provider>
@@ -85,18 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input</find>
-      <find>createroom</find>
-      <find>set_createroom</find>
-      <find>createroom_in</find>
-      <find>join</find>
-      <find>title</find>
-      <find>label</find>
-      <find>button</find>
-      <find>#</find>
-      <find>general_container</find>
-      <find>login_page_container</find>
-      <find>title_label</find>
       <find>login</find>
       <find>login_</find>
       <find>colors</find>
@@ -115,6 +114,18 @@
       <find>.col</find>
       <find>canvas_container</find>
       <find>player_list</find>
+      <find>css</find>
+      <find>sent_msg</find>
+      <find>time_date</find>
+      <find>incoming_msg</find>
+      <find>received_msg</find>
+      <find>outgoing_msg</find>
+      <find>received_withd_msg</find>
+      <find>outgoing</find>
+      <find>messag</find>
+      <find>right_column_chat</find>
+      <find>new_</find>
+      <find>incoming_msg_img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,6 +151,10 @@
         <option value="$PROJECT_DIR$/Login Page/js/login.js" />
         <option value="$PROJECT_DIR$/Login Page/css/style.css" />
         <option value="$PROJECT_DIR$/Login Page/index.html" />
+        <option value="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" />
+        <option value="$PROJECT_DIR$/Chat/index.html" />
+        <option value="$PROJECT_DIR$/tests/test.css" />
+        <option value="$PROJECT_DIR$/tests/test.html" />
         <option value="$PROJECT_DIR$/New Pinturillo 2/css/style.css" />
         <option value="$PROJECT_DIR$/New Pinturillo 2/index.html" />
       </list>
@@ -168,16 +183,6 @@
             <path>
               <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
-              <item name="Chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
-              <item name="Exemples_classe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
               <item name="New Pinturillo 2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -191,20 +196,18 @@
               <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
               <item name="New Pinturillo 2" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
-              <item name="New Pinturillo 2" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
+              <item name="sound" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
               <item name="New Pinturillo 2" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,16 +224,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Documentos\Old-School-Messenger\New Pinturillo 2\assets\video" />
-      <recent name="F:\Documentos\Old-School-Messenger\New Pinturillo 2\assets\img" />
-      <recent name="F:\Documentos\Old-School-Messenger\Login Page\js" />
-      <recent name="F:\Documentos\Old-School-Messenger" />
-      <recent name="$PROJECT_DIR$/login/templates/img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/login/templates/img" />
       <recent name="$PROJECT_DIR$/login/templates/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Documentos\Old-School-Messenger\New Pinturillo 2\assets\sound" />
+      <recent name="F:\Documentos\Old-School-Messenger\New Pinturillo 2\js" />
+      <recent name="F:\Documentos\Old-School-Messenger\New Pinturillo 2\assets\video" />
+      <recent name="F:\Documentos\Old-School-Messenger\New Pinturillo 2\assets\img" />
+      <recent name="F:\Documentos\Old-School-Messenger\Login Page\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -245,10 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration name="index_FE.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Old-School-Messenger/Login Page/index_FE.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Old-School-Messenger/Exemples_classe/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -261,20 +261,23 @@
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Old-School-Messenger/Chat/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Old-School-Messenger/tests/test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="JavaScript Debug.index.html (2)" />
-      <item itemvalue="JavaScript Debug.index_FE.html" />
       <item itemvalue="JavaScript Debug.index.html (3)" />
       <item itemvalue="JavaScript Debug.index.html (1)" />
+      <item itemvalue="JavaScript Debug.test.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (3)" />
+        <item itemvalue="JavaScript Debug.test.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
-        <item itemvalue="JavaScript Debug.index_FE.html" />
       </list>
     </recent_temporary>
   </component>
@@ -294,12 +297,13 @@
       <workItem from="1547747360772" duration="5637000" />
       <workItem from="1547920513775" duration="11918000" />
       <workItem from="1547951523029" duration="599000" />
-      <workItem from="1547985350596" duration="8260000" />
+      <workItem from="1547985350596" duration="8859000" />
+      <workItem from="1548011886420" duration="4448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46991000" />
+    <option name="totallyTimeSpent" value="52038000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -407,17 +411,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chat/javascript/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Chat/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="446" column="1" lean-forward="true" selection-start-line="446" selection-start-column="1" selection-end-line="446" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="99" column="31" lean-forward="true" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/test.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="98" column="26" lean-forward="true" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="129" column="44" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chat/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-383">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/assets/img/canvas_background.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -428,34 +463,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chat/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js">
+    <entry file="file://$PROJECT_DIR$/Chat/javascript/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/assets/img/canvas_background.PNG">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        <state relative-caret-position="268">
+          <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
         </state>
       </provider>
     </entry>
