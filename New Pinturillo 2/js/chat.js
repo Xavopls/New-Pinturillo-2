@@ -22,7 +22,7 @@ function sendMessage(){
 	var input = document.querySelector("#message");
 	var element = document.createElement('p');
 
-	element.innerHTML =input.value;
+	element.innerHTML ='<b>You: </b>'+input.value;
 	element.className="my message"
 	var msg=input.value;
 
