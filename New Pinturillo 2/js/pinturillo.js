@@ -31,7 +31,7 @@ var colors = document.querySelector("#colors");
 colors.addEventListener("click", setColors);
 
 function setColors(e) {
-	color = e.target.id;
+	color = '#'+e.target.id;
 }
 
 //Seleccion de tamano

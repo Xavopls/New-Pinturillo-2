@@ -16,31 +16,38 @@ server.on_message = function( author_id, msg ){
 
 
 function sendMessage() {
+	
+		var input = document.querySelector("#message");
+	if (input.value != '') {
+		var element = document.createElement('div');
 
-	var input = document.querySelector("#message");
-	var element = document.createElement('p');
+		element.className = "outgoing_msg"
 
-	element.innerHTML = '<b>You: </b>' + input.value;
-	element.className = "my message"
-	var msg = input.value;
+		element.innerHTML = '<div class="sent_msg"><p>' + input.value + "</p></div>";
 
-	//To send information to all the other users connected to the same room
-	//server.sendMessage(msg);
+		var msg = input.value;
 
-	document.querySelector("#messages").appendChild(element);
+		//To send information to all the other users connected to the same room
+		//server.sendMessage(msg);
 
-	var messages = document.querySelector('#messages');
-	messages.scrollTop = messages.scrollHeight;
-	var audio = document.querySelector('#myAudio');
-	audio.play();
-	input.value = "";
+		document.querySelector("#messages").appendChild(element);
+
+		var messages = document.querySelector('#messages');
+		messages.scrollTop = messages.scrollHeight;
+		var audio = document.querySelector('#myAudio');
+		audio.play();
+		input.value = "";
+	}
 }
 
 
 var input_message = document.querySelector('#message')
-input_message - addEventListener("keypress", function (evt) {
+input_message.addEventListener("keypress", function (evt) {
 
 	if (evt.keyCode == '13') {
 		sendMessage();
 	}
 })
+
+var send_message = document.querySelector("#send");
+send_message.addEventListener("click", sendMessage);
