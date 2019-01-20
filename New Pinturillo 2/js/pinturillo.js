@@ -22,7 +22,6 @@ function drawFrame(){
 drawFrame();
 
 
-
 //Seleccion de colores
 var colors = document.querySelector("#colors");
 colors.addEventListener("click", setColors);
