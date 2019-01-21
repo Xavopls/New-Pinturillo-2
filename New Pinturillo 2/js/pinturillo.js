@@ -74,4 +74,3 @@ cuerpo.addEventListener("mousemove", function (e) {
 	}
 });
 
-

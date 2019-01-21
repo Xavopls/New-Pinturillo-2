@@ -1,7 +1,11 @@
-var client = []
-client.nickname = '';
-client.room = '';
-client.user_id = '';
+var client = {
+	room: '',
+	nickname: '',
+	user_id:'',
+};
+//client.nickname = '';
+//client.room = '';
+//client.user_id = '';
 var client_list;
 var new_server;
 var url="ecv-esup.s.upf.edu:9000"
@@ -31,17 +35,29 @@ function j_room(){
 		new_server = new SillyClient();
 		new_server.connect(url,client.room);
 
+		new_server.on_ready = function(id){
+			client.user_id = id;
+			var client_json = JSON.constructor(client);
+
+			new_server.storeData(id + "_Pinturillo", JSON.stringify(client_json));
+
+			new_server.loadData(client.user_id + "_Pinturillo", function (data) {
+				console.log(data);
+			});
+
+			};
+
 		new_server.on_message = function( author_id, msg ){
 			reciveMessage(author_id, msg);
 				
 			};
-		//client.user_id =
+
 
 		new_server.on_room_info = function(info) {
 			client_list = info.clients;
 		};
 
-		//server.storeData(client., "mydata");
+
 
 
 		document.querySelector("#login_page_container").style.display="none";

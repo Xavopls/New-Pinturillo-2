@@ -93,7 +93,7 @@ margin-bottom: 40%;
 	font-size: 40px;
 	font-weight: bold;
 	background: transparent;
-
+	color: white !important;
 }
 
 #nickname::placeholder{
