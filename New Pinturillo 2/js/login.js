@@ -3,7 +3,6 @@ client.nickname = '';
 client.room = '';
 client.user_id = '';
 var client_list;
-var room_name:
 var new_server;
 var url="ecv-esup.s.upf.edu:9000"
 //ecv-esup.s.upf.edu:9000
@@ -26,21 +25,24 @@ server.getReport( function(report) {
 
 //Entrar en una sala
 function j_room(){
+
 	if(client.nickname!='' && client.room!=''){
-		
-		new_server = new SillyClient()
+		server.close();
+		new_server = new SillyClient();
 		new_server.connect(url,client.room);
 
 		new_server.on_message = function( author_id, msg ){
 			reciveMessage(author_id, msg);
 				
 			};
-
+		//client.user_id =
 
 		new_server.on_room_info = function(info) {
-			room_name = info.name;
 			client_list = info.clients;
 		};
+
+		//server.storeData(client., "mydata");
+
 
 		document.querySelector("#login_page_container").style.display="none";
 		document.querySelector("#game_page_container").style.display="inline";
