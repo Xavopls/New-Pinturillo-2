@@ -5,7 +5,7 @@ client.user_id = '';
 
 var new_server;
 
-var url="localhost:55000"
+var url="ecv-esup.s.upf.edu:9000"
 //ecv-esup.s.upf.edu:9000
 
 var server = new SillyClient(); //Crea instancia de servidor
