@@ -47,3 +47,5 @@ input_message.addEventListener("keypress", function (evt) {
 
 var send_message = document.querySelector("#send");
 send_message.addEventListener("click", sendMessage);
+
+

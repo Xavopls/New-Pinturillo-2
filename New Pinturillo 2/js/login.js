@@ -2,9 +2,9 @@ var client = []
 client.nickname = '';
 client.room = '';
 client.user_id = '';
-
+var client_list;
+var room_name:
 var new_server;
-
 var url="ecv-esup.s.upf.edu:9000"
 //ecv-esup.s.upf.edu:9000
 
@@ -34,7 +34,13 @@ function j_room(){
 		new_server.on_message = function( author_id, msg ){
 			reciveMessage(author_id, msg);
 				
-			}
+			};
+
+
+		new_server.on_room_info = function(info) {
+			room_name = info.name;
+			client_list = info.clients;
+		};
 
 		document.querySelector("#login_page_container").style.display="none";
 		document.querySelector("#game_page_container").style.display="inline";
@@ -59,3 +65,4 @@ join_room.addEventListener("click", function () {
 	client.nickname = document.querySelector("#nickname").value;
 	j_room();
 });
+

@@ -73,3 +73,5 @@ cuerpo.addEventListener("mousemove", function (e) {
 		title.innerHTML='New Pinturillo 2'
 	}
 });
+
+
