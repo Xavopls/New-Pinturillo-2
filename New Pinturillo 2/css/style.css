@@ -133,8 +133,14 @@ margin-bottom: 40%;
 #login_page_container {
 	margin-left: 30%;
 	margin-right: 30%;
-	display: none;
+	
 }
+
+#game_page_container {
+	display: none;
+
+}
+
 
 #video_title {
 	width: auto;

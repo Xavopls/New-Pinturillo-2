@@ -1,18 +1,18 @@
-/*
-server.on_message = function( author_id, msg ){
 
 
+
+function reciveMessage(author_id, msg){
 	var rec =document.createElement("div");
- 	rec.className="msg rec"
- 	rec.innerHTML =msg;
- 	document.querySelector("#chat").appendChild(rec)
-
+	rec.className="incoming_msg"
+	rec.innerHTML ='<div class="received_msg"><div class="received_withd_msg"><p>'+msg+'</p></div></div>';
+	document.querySelector("#messages").appendChild(rec)
 	var audio = document.querySelector('#myAudio');
 	audio.play()
 
-	console.log("Nuevo mensage de"+author_id+": "+msg);
+	var messages = document.querySelector('#messages');
+	messages.scrollTop = messages.scrollHeight;
 }
-*/
+
 
 
 function sendMessage() {
@@ -20,22 +20,15 @@ function sendMessage() {
 		var input = document.querySelector("#message");
 	if (input.value != '') {
 		var element = document.createElement('div');
-
-		element.className = "outgoing_msg"
-
-		element.innerHTML = '<div class="sent_msg"><p>' + input.value + "</p></div>";
-
 		var msg = input.value;
-
-		//To send information to all the other users connected to the same room
-		//server.sendMessage(msg);
-
+		element.className = "outgoing_msg"
+		element.innerHTML = '<div class="sent_msg"><p>' + msg + "</p></div>";
 		document.querySelector("#messages").appendChild(element);
 
 		var messages = document.querySelector('#messages');
 		messages.scrollTop = messages.scrollHeight;
-		var audio = document.querySelector('#myAudio');
-		audio.play();
+
+		new_server.sendMessage(msg);
 		input.value = "";
 	}
 }
