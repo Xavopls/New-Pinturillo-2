@@ -40,17 +40,18 @@ function j_room(){
 			var client_json = JSON.constructor(client);
 
 			new_server.storeData(id + "_Pinturillo", JSON.stringify(client_json));
-
-			new_server.loadData(client.user_id + "_Pinturillo", function (data) {
-				console.log(data);
-			});
+			cargarrr();
 
 			};
 
 		new_server.on_message = function( author_id, msg ){
 			reciveMessage(author_id, msg);
-				
+
 			};
+
+		new_server.on_user_connected = function( user_id ){
+			//actualizarlista(user_id)
+		}
 
 
 		new_server.on_room_info = function(info) {

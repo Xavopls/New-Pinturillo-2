@@ -73,4 +73,8 @@ cuerpo.addEventListener("mousemove", function (e) {
 		title.innerHTML='New Pinturillo 2'
 	}
 });
-
+function cargarrr () {
+	new_server.loadData(client.user_id + "_Pinturillo", function (data) {
+		console.log(data);
+	});
+}
