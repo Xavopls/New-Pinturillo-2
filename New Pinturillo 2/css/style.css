@@ -13,8 +13,11 @@
 
 html { width: 100%; height:100%; overflow:hidden;
 	 }
-html, button, input, label{
+html, label{
 	cursor: url("cursor.png"), auto;
+}
+button, input, canvas{
+	cursor: url("cursor_pick.png"), auto;
 }
 
 h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 65px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
