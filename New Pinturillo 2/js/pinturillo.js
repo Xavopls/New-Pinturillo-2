@@ -65,7 +65,11 @@ canvas.addEventListener("mousemove", function (e) {
 	positionY = e.clientY - canvasPos.y;
 });
 
+
+var cuerpo = document.querySelector("html")
 var title = document.querySelector("title");
-canvas.addEventListener("mousemove", function (e) {
-	title.innerHTML='New Pinturillo 2'
+cuerpo.addEventListener("mousemove", function (e) {
+	if(title.innerHTML!='New Pinturillo 2'){
+		title.innerHTML='New Pinturillo 2'
+	}
 });
