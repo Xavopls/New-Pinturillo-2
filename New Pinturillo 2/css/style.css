@@ -67,6 +67,7 @@ margin-bottom: 40%;
 	width: 75%;
 }
 #right_column {
+	margin-top: 0.3%;
 	padding-left: 5%;
 	padding-right: 5%;
 }
@@ -127,6 +128,7 @@ margin-bottom: 40%;
 	line-height: 150%;
 	color: white;
 	font-size: 15px;
+	margin-bottom: 5%;
 }
 
 #roomlist_label {
@@ -135,6 +137,9 @@ margin-bottom: 40%;
 	line-height: 150%;
 	color: white;
 	font-size: 15px;
+	margin-bottom: 10%;
+	margin-top: 2%;
+
 }
 #title_label {
 	display: block;

@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19bed702-3ab2-4070-87fd-a888c3fbdca1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,20 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3335">
-              <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+            <state relative-caret-position="406">
+              <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -98,7 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login_</find>
       <find>colors</find>
       <find>game_page</find>
       <find>display: non</find>
@@ -128,6 +126,7 @@
       <find>new_</find>
       <find>incoming_msg_img</find>
       <find>img</find>
+      <find>login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,9 +156,9 @@
         <option value="$PROJECT_DIR$/Chat/index.html" />
         <option value="$PROJECT_DIR$/tests/test.css" />
         <option value="$PROJECT_DIR$/tests/test.html" />
-        <option value="$PROJECT_DIR$/New Pinturillo 2/css/style.css" />
         <option value="$PROJECT_DIR$/New Pinturillo 2/index.html" />
         <option value="$PROJECT_DIR$/New Pinturillo 2/js/login.js" />
+        <option value="$PROJECT_DIR$/New Pinturillo 2/css/style.css" />
       </list>
     </option>
   </component>
@@ -187,6 +186,12 @@
               <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
               <item name="New Pinturillo 2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Old-School-Messenger" type="462c0819:PsiDirectoryNode" />
+              <item name="New Pinturillo 2" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Old-School-Messenger" type="b2602c69:ProjectViewProjectNode" />
@@ -284,12 +289,12 @@
       <workItem from="1547951523029" duration="599000" />
       <workItem from="1547985350596" duration="8859000" />
       <workItem from="1548011886420" duration="4690000" />
-      <workItem from="1548092877696" duration="228000" />
+      <workItem from="1548092877696" duration="877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52508000" />
+    <option name="totallyTimeSpent" value="53157000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -424,13 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3335">
-          <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1334">
@@ -462,7 +460,14 @@
     <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
         </state>
       </provider>
     </entry>
