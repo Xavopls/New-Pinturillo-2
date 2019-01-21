@@ -190,6 +190,7 @@ h1 {
 	font-weight: bold;
 	background: transparent;
 	color: white !important;
+	
 }
 
 #nickname::placeholder {
