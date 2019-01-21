@@ -9,6 +9,9 @@ function reciveMessage(author_id, msg){
 	var audio = document.querySelector('#myAudio');
 	audio.play()
 
+	var title = document.querySelector("title");
+	title.innerHTML="New Message!"
+
 	var messages = document.querySelector('#messages');
 	messages.scrollTop = messages.scrollHeight;
 }

@@ -64,3 +64,8 @@ canvas.addEventListener("mousemove", function (e) {
 	positionX = e.clientX - canvasPos.x;
 	positionY = e.clientY - canvasPos.y;
 });
+
+var title = document.querySelector("title");
+canvas.addEventListener("mousemove", function (e) {
+	title.innerHTML='New Pinturillo 2'
+});
