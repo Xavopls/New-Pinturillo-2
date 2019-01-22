@@ -66,7 +66,7 @@ function j_room(){
 		document.querySelector("#game_page_container").style.display="inline";
 
 		//aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
-		canvasPos = getPosition(canvas);
+		canvasPos = setCanvas(canvas);
 	}
 }
 

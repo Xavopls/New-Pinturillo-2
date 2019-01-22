@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <!--######################################  LOGIN PAGE  ######################################-->
     <div id="login_page_container">
         <h1>New Pinturillo 2 ✏️</h1>
@@ -20,19 +19,19 @@
             <div id="input_container" class="row">
                 <div class="column" id="left_column">
                     <div id="createroom_cointainer">
-                      
-                        <input name="p" required="required" id="createroom" placeholder="Room name"/>
+
+                        <input name="p" required="required" id="createroom" placeholder="Room name" />
                         <button type="submit" class="btn btn-primary btn-block btn-large" id="set_createroom"><b>Create
                                 room</b></button>
                     </div>
                 </div>
                 <div class="column" id="right_column">
-                   
+
                     <section class="container" id="dropdown_rooms">
                         <div class="dropdown">
                             <select name="one" class="dropdown-select" id="select_room">
-                            <option value="" disabled selected>Room list...</option>
-                                
+                                <option value="" disabled selected>Room list...</option>
+
                             </select>
                         </div>
                     </section>
@@ -42,9 +41,7 @@
         </div>
     </div>
 
-
     <!--######################################  GAME PAGE  ######################################-->
-
     <div id="game_page_container" class="row">
 
         <div id="left_column_game" class="column_players">
@@ -69,7 +66,6 @@
             <div id="canvas_container">
                 <canvas id="paint" width="667" height="432"></canvas>
 
-
             </div>
             <div id="tools">
                 <p>TOOLS</p>
@@ -79,6 +75,7 @@
                     <button id="009588" class=""></button>
                     <button id="F44336" class=""></button>
                     <button id="FFC108" class=""></button>
+                    <button id="clean" class="">Clean</button>
                 </div>
                 <input id="slider" type="range" min="1" max="40" step="1" value="1" />
 
@@ -92,7 +89,7 @@
                 </audio>
                 <div id="messages" class="container darker">
 
-<!--
+                    <!--
                     <div class="incoming_msg">
                         <div class="received_msg">
                             <div class="received_withd_msg">
@@ -120,8 +117,6 @@
                     </div>
 -->
 
-
-
                 </div>
                 <div id="input_chat" class="row">
                     <div id="left_column_chat" class="column_chat">
@@ -134,48 +129,9 @@
 
 
             </div>
-
         </div>
     </div>
-
     </div>
-
-
-
-    <!--
-    <div id="room">
-
-        <div id="users">
-        </div>
-
-        <canvas id="paint"  width="667" height="432"></canvas>
-
-        <div id="colors">
-            <button id="black"></button>
-            <button id="blue"></button>
-            <button id="green"></button>
-            <button id="red"></button>
-            <button id="yellow"></button>
-        </div>
-        <input id="slider" type="range" min="1" max="10" step="1" value="3" />
-
-        <div id="messages">
-        </div>
-
-        <div id="chat">
-            <div id="my_messages">
-            </div>
-            <input id="message" type="text"></input>
-            <button id="send"></button>
-        </div>
-
-        <div id="add">
-        </div>
-
-    </div>
-    -->
-
-
 
     <script src="js/sillyclient.js"></script>
     <script src="js/login.js"></script>

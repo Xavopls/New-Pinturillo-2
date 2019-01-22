@@ -2,8 +2,8 @@ var my_circle = {
 	tipo: 'circulo',
 	color: 'black',
 	size: '8',
-	positionX:'',
-	positionY:'',
+	positionX: '',
+	positionY: '',
 };
 
 var clic = 0;
@@ -16,7 +16,7 @@ background.src = "./assets/img/canvas_background.PNG";
 
 
 function draw_pointer(todraw) {
-	
+
 	ctx.beginPath();
 	ctx.arc(todraw.positionX, todraw.positionY, todraw.size, 0, 2 * Math.PI, true);
 	ctx.fillStyle = todraw.color;
@@ -24,16 +24,16 @@ function draw_pointer(todraw) {
 }
 
 function drawFrame() {
-	
-	
 
-	if(clic==1){
+
+
+	if (clic == 1) {
 		draw_pointer(my_circle)
 		new_server.sendMessage(JSON.stringify(my_circle));
 	}
-	
-	
-	
+
+
+
 	requestAnimationFrame(drawFrame); //Per demanarli al Chrome que requereixi aquesta funcio per cada refresh. La funcio es passa sense els ()
 }
 drawFrame();
@@ -44,7 +44,7 @@ var colors = document.querySelector("#colors");
 colors.addEventListener("click", setColors);
 
 function setColors(e) {
-	my_circle.color = '#'+e.target.id;
+	my_circle.color = '#' + e.target.id;
 }
 
 //Seleccion de tamano
@@ -56,7 +56,7 @@ slider.oninput = function () {
 
 
 //aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
-function getPosition(el) {
+function setCanvas(el) {
 	var xPosition = 0;
 	var yPosition = 0;
 	ctx.drawImage(background, 0, 0);
@@ -71,29 +71,34 @@ function getPosition(el) {
 	};
 }
 
+function limpia() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.drawImage(background, 0, 0);
+}
 
 canvas.addEventListener("mousemove", function (e) {
 	my_circle.positionX = e.clientX - canvasPos.x;
 	my_circle.positionY = e.clientY - canvasPos.y;
 });
 
-canvas.addEventListener("mousedown", function(e){
-	
-++clic;
-console.log(clic)
-
+canvas.addEventListener("mousedown", function (e) {
+	++clic;
 });
-canvas.addEventListener("mouseup", function(e){
+canvas.addEventListener("mouseup", function (e) {
 	--clic;
-	console.log(clic)
-	
-	});
+});
+
+var set_clean = document.querySelector("#clean");
+set_clean.addEventListener("click", function () {
+	limpia()
+	var clean={tipo: 'clean',};
+	new_server.sendMessage(JSON.stringify(clean))
+});
 
 
 
 
-
-function cargarrr () {
+function cargarrr() {
 	new_server.loadData(client.user_id + "_Pinturillo", function (data) {
 		console.log(data);
 	});

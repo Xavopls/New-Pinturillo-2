@@ -22,6 +22,9 @@ function reciveMessage(author_id, msg) {
 		var messages = document.querySelector('#messages');
 		messages.scrollTop = messages.scrollHeight;
 	}
+	if (msga[Object.keys(msga)[0]] == 'clean') {
+		limpia()
+	}
 }
 
 
