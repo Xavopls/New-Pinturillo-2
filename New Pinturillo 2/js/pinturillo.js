@@ -40,8 +40,7 @@ slider.oninput = function () {
 	size = this.value;
 }
 
-//aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
-var canvasPos = getPosition(canvas);
+
 
 //aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
 function getPosition(el) {

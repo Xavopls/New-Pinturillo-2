@@ -8,7 +8,8 @@ var client = {
 //client.user_id = '';
 var client_list;
 var new_server;
-var url="ecv-esup.s.upf.edu:9000"
+var canvasPos;
+var url="ecv-etic.upf.edu:9000"
 //ecv-esup.s.upf.edu:9000
 
 var server = new SillyClient(); //Crea instancia de servidor
@@ -63,6 +64,9 @@ function j_room(){
 
 		document.querySelector("#login_page_container").style.display="none";
 		document.querySelector("#game_page_container").style.display="inline";
+
+		//aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
+		canvasPos = getPosition(canvas);
 	}
 }
 
