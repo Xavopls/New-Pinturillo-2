@@ -11,7 +11,7 @@ function reciveMessage(author_id, msg) {
 
 		var rec = document.createElement("div");
 		rec.className = "incoming_msg"
-		rec.innerHTML = '<div class="received_msg"><div class="received_withd_msg"><p><b>' + msga.nickname + ':</b><br>' + msga.message + '</p></div></div>';
+		rec.innerHTML = '<div class="received_msg"><div class="received_withd_msg"><p><b style="color:'+ msga.color+'">' + msga.nickname + ':</b><br>' + msga.message + '</p></div></div>';
 		document.querySelector("#messages").appendChild(rec)
 		var audio = document.querySelector('#myAudio');
 		audio.play()
@@ -48,6 +48,7 @@ function sendMessage() {
 		letter.tipo = 'mensaje'
 		letter.message = msg
 		letter.nickname = client.nickname;
+		letter.color=client.color;
 		console.log(letter)
 		new_server.sendMessage(JSON.stringify(letter));
 

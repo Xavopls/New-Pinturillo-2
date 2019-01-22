@@ -2,7 +2,11 @@ var client = {
 	room: '',
 	nickname: '',
 	user_id:'',
+	color:'',
 };
+
+colores=["#2096F3","#009588","#F44336","#FFC108"]
+client.color=colores[Math.floor(Math.random() * colores.length)];
 //client.nickname = '';
 //client.room = '';
 //client.user_id = '';
