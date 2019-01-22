@@ -1,8 +1,12 @@
-var color = 'black';
-var size = 8;
-var positionX;
-var positionY;
+var my_circle = {
+	tipo: 'circulo',
+	color: 'black',
+	size: '8',
+	positionX:'',
+	positionY:'',
+};
 
+var clic = 0;
 
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
@@ -10,17 +14,26 @@ var background = new Image();
 background.src = "./assets/img/canvas_background.PNG";
 
 
-function draw_pointer() {
-	ctx.drawImage(background, 0, 0)
+
+function draw_pointer(todraw) {
+	
 	ctx.beginPath();
-	ctx.arc(positionX, positionY, size, 0, 2 * Math.PI, true);
-	ctx.fillStyle = color;
+	ctx.arc(todraw.positionX, todraw.positionY, todraw.size, 0, 2 * Math.PI, true);
+	ctx.fillStyle = todraw.color;
 	ctx.fill();
 }
 
 function drawFrame() {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	draw_pointer()
+	
+	
+
+	if(clic==1){
+		draw_pointer(my_circle)
+		new_server.sendMessage(JSON.stringify(my_circle));
+	}
+	
+	
+	
 	requestAnimationFrame(drawFrame); //Per demanarli al Chrome que requereixi aquesta funcio per cada refresh. La funcio es passa sense els ()
 }
 drawFrame();
@@ -31,13 +44,13 @@ var colors = document.querySelector("#colors");
 colors.addEventListener("click", setColors);
 
 function setColors(e) {
-	color = '#'+e.target.id;
+	my_circle.color = '#'+e.target.id;
 }
 
 //Seleccion de tamano
 var slider = document.getElementById("slider");
 slider.oninput = function () {
-	size = this.value;
+	my_circle.size = this.value;
 }
 
 
@@ -46,7 +59,7 @@ slider.oninput = function () {
 function getPosition(el) {
 	var xPosition = 0;
 	var yPosition = 0;
-
+	ctx.drawImage(background, 0, 0);
 	while (el) {
 		xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
 		yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
@@ -58,20 +71,28 @@ function getPosition(el) {
 	};
 }
 
-var canvas_pos = document.querySelector("canvas");
+
 canvas.addEventListener("mousemove", function (e) {
-	positionX = e.clientX - canvasPos.x;
-	positionY = e.clientY - canvasPos.y;
+	my_circle.positionX = e.clientX - canvasPos.x;
+	my_circle.positionY = e.clientY - canvasPos.y;
 });
 
+canvas.addEventListener("mousedown", function(e){
+	
+++clic;
+console.log(clic)
 
-var cuerpo = document.querySelector("html")
-var title = document.querySelector("title");
-cuerpo.addEventListener("mousemove", function (e) {
-	if(title.innerHTML!='New Pinturillo 2'){
-		title.innerHTML='New Pinturillo 2'
-	}
 });
+canvas.addEventListener("mouseup", function(e){
+	--clic;
+	console.log(clic)
+	
+	});
+
+
+
+
+
 function cargarrr () {
 	new_server.loadData(client.user_id + "_Pinturillo", function (data) {
 		console.log(data);
