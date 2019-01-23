@@ -124,6 +124,7 @@ join_room.addEventListener("click", function () {
 	j_room();
 });
 
+//copiat de https://www.phpied.com/sleep-in-javascript/
 function sleep(milliseconds) {
 	var start = new Date().getTime();
 	for (var i = 0; i < 1e7; i++) {
