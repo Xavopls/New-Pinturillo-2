@@ -47,75 +47,78 @@
         <div id="left_column_game" class="column_players">
 
             <div id="player_list_header">
-                <p>PLAYER LIST</p>
+                <h1 id="player_list_label">Player list</h1>
             </div>
             <div id="player_list">
                 <div class="player_name">
-                    <p>PLAYER 1</p>
                 </div>
-
-                <p>PLAYER 2</p>
-                <p>PLAYER 3</p>
-                <p>PLAYER 4</p>
-                <p>PLAYER 5</p>
             </div>
         </div>
         <div id="mid_column_game" class="column_canvas">
-            <p>CANVAS</p>
+            <h1 id="room_title">Room: </h1>
 
             <div id="canvas_container">
                 <canvas id="paint" width="667" height="432"></canvas>
 
             </div>
-            <div id="tools">
-                <p>TOOLS</p>
-                <div id="colors">
-                    <button id="212121" class=""></button>
-                    <button id="2096F3" class=""></button>
-                    <button id="009588" class=""></button>
-                    <button id="F44336" class=""></button>
-                    <button id="FFC108" class=""></button>
-                    <button id="clean" class="">Clean</button>
+            <div id="tools" class="row">
+
+                <div id="colors" class="left_column_colors">
+                    <button id="212121" class="black_button">----------</button>
+                    <button id="2096F3" class="blue_button">----------</button>
+                    <button id="009588" class="turqoise_button">----------</button>
+                    <button id="F44336" class="red_button">----------</button>
+                    <button id="FFC108" class="yellow_button">----------</button>
                 </div>
-                <input id="slider" type="range" min="1" max="40" step="1" value="1" />
+                <div id="slider_container">
+                    <input id="slider" type="range" min="1" max="40" step="1" value="1" />
+                </div>
+
+                <div id="clean_button" class="right_column_colors">
+                    <div id="button_clean">
+                        <button type="submit" class="btn btn-primary btn-block btn-large" id="clean"><b>Clean board</b></button>
+                    </div>
+                </div>
+
 
             </div>
         </div>
         <div id="right_column_game" class="column_chat">
-            <p>CHAT</p>
+            <h1 id="chat_label">Chat</h1>
             <div id="chat">
                 <audio id="myAudio">
                     <source src="assets/sound/new_message.mp3" type="audio/mp3">
                 </audio>
                 <div id="messages" class="container darker">
 
-                    <!--
-                    <div class="incoming_msg">
-                        <div class="received_msg">
-                            <div class="received_withd_msg">
-                                <p>Test, which is a new approach to have</p>
-                                <span class="time_date"> 11:01 AM | Yesterday</span>
+
+                        <!--
+                        <div class="incoming_msg">
+                            <div class="received_msg">
+                                <div class="received_withd_msg">
+                                    <p>Test, which is a new approach to have</p>
+                                    <span class="time_date"> 11:01 AM | Yesterday</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="outgoing_msg">
-                        <div class="sent_msg">
-                            <p>Apollo University, Delhi, India Test</p>
-                            <span class="time_date"> 11:01 AM | Today</span>
-                        </div>
-                    </div>
-                    <div class="incoming_msg">
-                        <div class="received_msg">
-                            <div class="received_withd_msg">
-                                <p>We work directly with our designers and suppliers,
-                                    and sell direct to you, which means quality, exclusive
-                                    products, at a price anyone can afford.</p>
+                        <div class="outgoing_msg">
+                            <div class="sent_msg">
+                                <p>Apollo University, Delhi, India Test</p>
                                 <span class="time_date"> 11:01 AM | Today</span>
                             </div>
                         </div>
-                    </div>
--->
+                        <div class="incoming_msg">
+                            <div class="received_msg">
+                                <div class="received_withd_msg">
+                                    <p>We work directly with our designers and suppliers,
+                                        and sell direct to you, which means quality, exclusive
+                                        products, at a price anyone can afford.</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+    -->
 
                 </div>
                 <div id="input_chat" class="row">
@@ -137,7 +140,6 @@
     <script src="js/login.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/pinturillo.js"></script>
-    <script src="js/playerlist.js"></script>
 
 </body>
 

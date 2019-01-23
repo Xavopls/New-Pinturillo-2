@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19bed702-3ab2-4070-87fd-a888c3fbdca1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New Pinturillo 2/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js" beforeDir="false" afterPath="$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Pinturillo 2/js/playerlist.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,50 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="183" column="33" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="943">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/playerlist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/sillyclient.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="889">
-              <caret line="308" column="37" selection-start-line="308" selection-start-column="37" selection-end-line="308" selection-end-column="37" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="575">
+              <caret line="78" column="115" selection-start-line="78" selection-start-column="115" selection-end-line="78" selection-end-column="115" />
             </state>
           </provider>
         </entry>
@@ -73,8 +39,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="241" column="4" lean-forward="true" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
+            <state relative-caret-position="368">
+              <caret line="410" column="19" selection-start-line="410" selection-start-column="19" selection-end-line="410" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1771">
+              <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#b#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-506">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -82,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+            <state relative-caret-position="268">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -94,43 +81,43 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>row</find>
-      <find>colum</find>
-      <find>messa</find>
-      <find>chat</find>
+      <find>column</find>
+      <find>clean</find>
       <find>messages</find>
-      <find>.col</find>
-      <find>canvas_container</find>
-      <find>player_list</find>
-      <find>css</find>
-      <find>sent_msg</find>
-      <find>time_date</find>
-      <find>incoming_msg</find>
-      <find>received_msg</find>
-      <find>outgoing_msg</find>
-      <find>received_withd_msg</find>
-      <find>outgoing</find>
-      <find>messag</find>
-      <find>right_column_chat</find>
-      <find>new_</find>
-      <find>incoming_msg_img</find>
-      <find>img</find>
-      <find>login</find>
-      <find>server</find>
-      <find>new_server</find>
-      <find>room</find>
-      <find>report</find>
+      <find>chat</find>
+      <find>play</find>
+      <find>left_column</find>
+      <find>slider</find>
+      <find>send</find>
+      <find>antoni</find>
+      <find>join</find>
+      <find>room_title</find>
       <find>user</find>
-      <find>roomlist</find>
-      <find>serv</find>
-      <find>getReport</find>
+      <find>append</find>
+      <find>.querySelector(&quot;#mess</find>
+      <find>JSON</find>
+      <find>store</find>
+      <find>cargarr</find>
+      <find>received_withd_msg</find>
+      <find>room_tit</find>
+      <find>STORE</find>
+      <find>carga</find>
+      <find>sto</find>
+      <find>new_ser</find>
+      <find>212121</find>
+      <find>color</find>
+      <find>client_</find>
+      <find>colors</find>
+      <find>2121</find>
+      <find>player</find>
+      <find>clean_button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,12 +146,13 @@
         <option value="$PROJECT_DIR$/Chat/index.html" />
         <option value="$PROJECT_DIR$/tests/test.css" />
         <option value="$PROJECT_DIR$/tests/test.html" />
-        <option value="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" />
-        <option value="$PROJECT_DIR$/New Pinturillo 2/index.html" />
         <option value="$PROJECT_DIR$/New Pinturillo 2/js/playerlist.js" />
-        <option value="$PROJECT_DIR$/New Pinturillo 2/css/style.css" />
-        <option value="$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js" />
+        <option value="$PROJECT_DIR$/New Pinturillo 2/css/slider.css" />
         <option value="$PROJECT_DIR$/New Pinturillo 2/js/login.js" />
+        <option value="$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js" />
+        <option value="$PROJECT_DIR$/New Pinturillo 2/js/chat.js" />
+        <option value="$PROJECT_DIR$/New Pinturillo 2/css/style.css" />
+        <option value="$PROJECT_DIR$/New Pinturillo 2/index.html" />
       </list>
     </option>
   </component>
@@ -302,11 +290,13 @@
       <workItem from="1547985350596" duration="8859000" />
       <workItem from="1548011886420" duration="4690000" />
       <workItem from="1548092877696" duration="6354000" />
+      <workItem from="1548105634709" duration="758000" />
+      <workItem from="1548185793867" duration="16092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58634000" />
+    <option name="totallyTimeSpent" value="75484000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -441,20 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="241" column="4" lean-forward="true" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="183" column="33" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Chat/javascript/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -462,13 +438,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/sillyclient.js">
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/w3.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="308" column="37" selection-start-line="308" selection-start-column="37" selection-end-line="308" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="268">
+          <caret line="107" column="124" selection-start-line="107" selection-start-column="117" selection-end-line="107" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/slider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="154" column="1" selection-start-line="154" selection-start-column="1" selection-end-line="154" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -479,24 +459,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/sillyclient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+        <state relative-caret-position="268">
+          <caret line="316" column="24" selection-start-line="316" selection-start-column="20" selection-end-line="316" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="-506">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/pinturillo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="410" column="19" selection-start-line="410" selection-start-column="19" selection-end-line="410" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New Pinturillo 2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="78" column="115" selection-start-line="78" selection-start-column="115" selection-end-line="78" selection-end-column="115" />
         </state>
       </provider>
     </entry>

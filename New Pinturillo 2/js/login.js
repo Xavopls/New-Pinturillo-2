@@ -54,7 +54,7 @@ function j_room(){
 			var client_json = JSON.constructor(client);
 
 			new_server.storeData(id + "_Pinturillo", JSON.stringify(client_json));
-			cargarrr();
+			loadClientList();
 
 			};
 

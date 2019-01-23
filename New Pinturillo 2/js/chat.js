@@ -25,6 +25,9 @@ function reciveMessage(author_id, msg) {
 	if (msga[Object.keys(msga)[0]] == 'clean') {
 		limpia()
 	}
+	if (msga[Object.keys(msga)[0]] == 'player_list') {
+
+	}
 }
 
 

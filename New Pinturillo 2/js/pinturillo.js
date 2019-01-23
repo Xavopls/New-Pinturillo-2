@@ -97,9 +97,17 @@ set_clean.addEventListener("click", function () {
 
 
 
-
-function cargarrr() {
-	new_server.loadData(client.user_id + "_Pinturillo", function (data) {
-		console.log(data);
-	});
+function loadClientList() {
+		new_server.on_room_info = function(info){
+		document.querySelector("#room_title").textContent += info.name;
+			info.clients.forEach(function(element) {
+				new_server.loadData(element.toString() + "_Pinturillo", function (data) {
+					data+='-"}';
+					var input = document.createElement('p');
+					input.innerHTML = '<h1 class="client_from_list">'+JSON.parse(data).nickname+'</h1>';
+					document.querySelector("#player_list").appendChild(input);
+				})
+		});
+		}
 }
+
