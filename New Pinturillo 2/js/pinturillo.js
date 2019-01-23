@@ -24,6 +24,7 @@ function draw_pointer(todraw) {
 }
 
 function drawFrame() {
+	
 
 
 
@@ -57,6 +58,7 @@ slider.oninput = function () {
 
 //aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
 function setCanvas(el) {
+	printo()
 	var xPosition = 0;
 	var yPosition = 0;
 	ctx.drawImage(background, 0, 0);
@@ -69,6 +71,7 @@ function setCanvas(el) {
 		x: xPosition,
 		y: yPosition
 	};
+
 }
 
 function limpia() {
@@ -96,18 +99,4 @@ set_clean.addEventListener("click", function () {
 });
 
 
-
-function loadClientList() {
-		new_server.on_room_info = function(info){
-		document.querySelector("#room_title").textContent += decodeURI(info.name);
-			info.clients.forEach(function(element) {
-				new_server.loadData(element.toString() + "_Pinturillo", function (data) {
-					data+='-"}';
-					var input = document.createElement('p');
-					input.innerHTML = '<h1 class="client_from_list">'+JSON.parse(data).nickname+'</h1>';
-					document.querySelector("#player_list").appendChild(input);
-				})
-		});
-		}
-}
 

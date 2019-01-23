@@ -1,3 +1,5 @@
+
+
 function reciveMessage(author_id, msg) {
 
 	var msga = JSON.parse(msg)
@@ -5,13 +7,13 @@ function reciveMessage(author_id, msg) {
 	if (msga[Object.keys(msga)[0]] == 'circulo') {
 		draw_pointer(msga)
 	}
-	
+
 	if (msga[Object.keys(msga)[0]] == 'mensaje') {
-		
+
 
 		var rec = document.createElement("div");
 		rec.className = "incoming_msg"
-		rec.innerHTML = '<div class="received_msg"><div class="received_withd_msg"><p><b style="color:'+ msga.color+'">' + msga.nickname + ':</b><br>' + msga.message + '</p></div></div>';
+		rec.innerHTML = '<div class="received_msg"><div class="received_withd_msg"><p><b style="color:' + msga.color + '">' + msga.nickname + ':</b><br>' + msga.message + '</p></div></div>';
 		document.querySelector("#messages").appendChild(rec)
 		var audio = document.querySelector('#myAudio');
 		audio.play()
@@ -51,7 +53,7 @@ function sendMessage() {
 		letter.tipo = 'mensaje'
 		letter.message = msg
 		letter.nickname = client.nickname;
-		letter.color=client.color;
+		letter.color = client.color;
 		console.log(letter)
 		new_server.sendMessage(JSON.stringify(letter));
 
@@ -79,3 +81,45 @@ cuerpo.addEventListener("mousemove", function (e) {
 		title.innerHTML = 'New Pinturillo 2'
 	}
 });
+
+
+
+function loadClientList() {
+	new_server.on_room_info = function (info) {
+		document.querySelector("#room_title").textContent += decodeURI(info.name);
+		
+		info.clients.forEach(function (element) {
+			
+			new_server.loadData(element.toString() + "_Pinturillo", function (data) {
+				
+				var cl = JSON.parse(data)
+				
+				client_list.push(cl)
+				
+				
+			})
+			
+		});
+		
+	}
+	
+
+
+
+
+	
+}
+
+function printo() {
+console.log(client_list)
+console.log(typeof(client_list))
+
+console.log(client_list[0])
+	for(var a in client_list){
+		console.log("entra2")
+		console.log(a)
+		var input = document.createElement('p');
+		input.innerHTML = '<h1 class="client_from_list">' + a.nickname + '</h1>';
+		document.querySelector("#player_list").appendChild(input);
+	}
+}

@@ -5,21 +5,21 @@ var client = {
 	color:'',
 };
 
-colores=['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
-'#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
-'#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
-'#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
-'#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
-'#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
-'#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
-'#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
-'#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
-'#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+colores=['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6', 
+'E6B333', '3366E6', '999966', '99FF99', 'B34D4D',
+'80B300', '809900', 'E6B3B3', '6680B3', '66991A', 
+'FF99E6', 'CCFF1A', 'FF1A66', 'E6331A', '33FFCC',
+'66994D', 'B366CC', '4D8000', 'B33300', 'CC80CC', 
+'66664D', '991AFF', 'E666FF', '4DB3FF', '1AB399',
+'E666B3', '33991A', 'CC9999', 'B3B31A', '00E680', 
+'4D8066', '809980', 'E6FF80', '1AFF33', '999933',
+'FF3380', 'CCCC00', '66E64D', '4D80CC', '9900B3', 
+'E64D66', '4DB380', 'FF4D4D', '99E6E6', '6666FF'];
 client.color=colores[Math.floor(Math.random() * colores.length)];
-//client.nickname = '';
+//client.nickname = ''
 //client.room = '';
 //client.user_id = '';
-var client_list;
+var client_list = []
 var new_server;
 var canvasPos;
 var url="ecv-etic.upf.edu:9000"
@@ -51,12 +51,11 @@ function j_room(){
 
 		new_server.on_ready = function(id){
 			client.user_id = id;
-			var client_json = JSON.constructor(client);
-
-			new_server.storeData(id + "_Pinturillo", JSON.stringify(client_json));
+			new_server.storeData(id + "_Pinturillo", JSON.stringify(client));
 			loadClientList();
-
+			
 			};
+			
 
 		new_server.on_message = function( author_id, msg ){
 			reciveMessage(author_id, msg);
@@ -68,18 +67,13 @@ function j_room(){
 		}
 
 
-		new_server.on_room_info = function(info) {
-			client_list = info.clients;
-		};
-
-
-
 
 		document.querySelector("#login_page_container").style.display="none";
 		document.querySelector("#game_page_container").style.display="inline";
 
 		//aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
 		canvasPos = setCanvas(canvas);
+		
 	}
 }
 
