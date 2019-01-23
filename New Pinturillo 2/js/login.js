@@ -65,26 +65,29 @@ function j_room() {
 
 
 		new_server.on_user_connected = function (user_id) {
-var cargar=user_id+"_Pinturillo"
-console.log(cargar)
+			sleep(2000);
+			var cargar = user_id + "_Pinturillo"
+			console.log(cargar)
 			//Borra tots els fills
 			new_server.loadData(cargar, function (data) {
 
-				var cl= JSON.parse(data);
+
+
+				var cl = JSON.parse(data);
 
 				var input = document.createElement('p');
-				input.id=cl.user_id;
-				input.className='conectados'
-				input.innerHTML = '<h1 class="client_from_list" style="color:#' + cl.color + '">' + '<span style="color:#00ff21">● </span>'+cl.nickname + '</h1>';
+				input.id = cl.user_id;
+				input.className = 'conectados'
+				input.innerHTML = '<h1 class="client_from_list" style="color:#' + cl.color + '">' + '<span style="color:#00ff21">● </span>' + cl.nickname + '</h1>';
 				document.querySelector("#player_list").appendChild(input);
 			})
 
-			
+
 
 		}
 
 
-		new_server.on_user_disconnected = function( user_id ){
+		new_server.on_user_disconnected = function (user_id) {
 			var parent = document.querySelector("#player_list")
 			var child = document.getElementById(user_id)
 			parent.removeChild(child);
@@ -120,3 +123,12 @@ join_room.addEventListener("click", function () {
 	client.nickname = document.querySelector("#nickname").value;
 	j_room();
 });
+
+function sleep(milliseconds) {
+	var start = new Date().getTime();
+	for (var i = 0; i < 1e7; i++) {
+		if ((new Date().getTime() - start) > milliseconds) {
+			break;
+		}
+	}
+}
