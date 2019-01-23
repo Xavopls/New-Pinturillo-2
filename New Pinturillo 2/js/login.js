@@ -74,7 +74,8 @@ console.log(cargar)
 
 				var input = document.createElement('p');
 				input.id=cl.user_id;
-				input.innerHTML = '<h1 class="client_from_list" style="color:#' + cl.color + '">' + cl.nickname + '</h1>';
+				input.className='conectados'
+				input.innerHTML = '<h1 class="client_from_list" style="color:#' + cl.color + '">' + '<span style="color:#00ff21">● </span>'+cl.nickname + '</h1>';
 				document.querySelector("#player_list").appendChild(input);
 			})
 
