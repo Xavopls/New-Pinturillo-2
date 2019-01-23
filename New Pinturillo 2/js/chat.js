@@ -27,9 +27,6 @@ function reciveMessage(author_id, msg) {
 	if (msga[Object.keys(msga)[0]] == 'clean') {
 		limpia()
 	}
-	if (msga[Object.keys(msga)[0]] == 'player_list') {
-
-	}
 }
 
 
@@ -84,42 +81,21 @@ cuerpo.addEventListener("mousemove", function (e) {
 
 
 
-function loadClientList() {
+ function  loadClientList() {
 	new_server.on_room_info = function (info) {
 		document.querySelector("#room_title").textContent += decodeURI(info.name);
-		
 		info.clients.forEach(function (element) {
 			
 			new_server.loadData(element.toString() + "_Pinturillo", function (data) {
-				
+
 				var cl = JSON.parse(data)
-				
-				client_list.push(cl)
-				
-				
+
+				var input = document.createElement('p');
+				input.innerHTML = '<h1 class="client_from_list">' + cl.nickname + '</h1>';
+				document.querySelector("#player_list").appendChild(input);
 			})
 			
 		});
 		
-	}
-	
-
-
-
-
-	
-}
-
-function printo() {
-console.log(client_list)
-console.log(typeof(client_list))
-
-console.log(client_list[0])
-	for(var a in client_list){
-		console.log("entra2")
-		console.log(a)
-		var input = document.createElement('p');
-		input.innerHTML = '<h1 class="client_from_list">' + a.nickname + '</h1>';
-		document.querySelector("#player_list").appendChild(input);
 	}
 }

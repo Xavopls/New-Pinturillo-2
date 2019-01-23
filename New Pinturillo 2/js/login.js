@@ -19,7 +19,6 @@ client.color=colores[Math.floor(Math.random() * colores.length)];
 //client.nickname = ''
 //client.room = '';
 //client.user_id = '';
-var client_list = []
 var new_server;
 var canvasPos;
 var url="ecv-etic.upf.edu:9000"
@@ -62,8 +61,44 @@ function j_room(){
 
 			};
 
+
+
 		new_server.on_user_connected = function( user_id ){
-			//actualizarlista(user_id)
+			var player_list_p = document.querySelector("#player_list");
+			//Borra tots els fills
+			while (player_list_p.firstChild) {
+				player_list_p.removeChild(player_list_p.firstChild);
+			}
+			console.log('1')
+			console.log(new_server.clients)
+
+			console.log('2')
+			new_server.loadData(user_id.toString() + "_Pinturillo", function (data) {
+				console.log('5')
+
+				var cl = JSON.parse(data)
+				console.log('6')
+
+				var input = document.createElement('p');
+				input.innerHTML = '<h1 class="client_from_list">' + cl.nickname + '</h1>';
+				document.querySelector("#player_list").appendChild(input);
+
+
+				document.querySelector("#room_title").textContent += decodeURI(info.name);
+				console.log('3')
+			})
+
+				info.clients.forEach(function (element) {
+					console.log('4')
+
+
+
+				});
+
+
+
+
+			}
 		}
 
 
@@ -74,7 +109,7 @@ function j_room(){
 		//aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
 		canvasPos = setCanvas(canvas);
 		
-	}
+
 }
 
 

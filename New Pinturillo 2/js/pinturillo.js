@@ -58,7 +58,6 @@ slider.oninput = function () {
 
 //aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
 function setCanvas(el) {
-	printo()
 	var xPosition = 0;
 	var yPosition = 0;
 	ctx.drawImage(background, 0, 0);
