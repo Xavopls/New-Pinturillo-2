@@ -99,7 +99,7 @@ set_clean.addEventListener("click", function () {
 
 function loadClientList() {
 		new_server.on_room_info = function(info){
-		document.querySelector("#room_title").textContent += info.name;
+		document.querySelector("#room_title").textContent += decodeURI(info.name);
 			info.clients.forEach(function(element) {
 				new_server.loadData(element.toString() + "_Pinturillo", function (data) {
 					data+='-"}';
