@@ -13,7 +13,7 @@ function reciveMessage(author_id, msg) {
 
 		var rec = document.createElement("div");
 		rec.className = "incoming_msg"
-		rec.innerHTML = '<div class="received_msg"><div class="received_withd_msg"><p><b style="color:' + msga.color + '">' + msga.nickname + ':</b><br>' + msga.message + '</p></div></div>';
+		rec.innerHTML = '<div class="received_msg"><div class="received_withd_msg"><p><b style="color:#' + msga.color + '">' + msga.nickname + ':</b><br>' + msga.message + '</p></div></div>';
 		document.querySelector("#messages").appendChild(rec)
 		var audio = document.querySelector('#myAudio');
 		audio.play()
@@ -91,7 +91,8 @@ cuerpo.addEventListener("mousemove", function (e) {
 				var cl = JSON.parse(data)
 
 				var input = document.createElement('p');
-				input.innerHTML = '<h1 class="client_from_list">' + cl.nickname + '</h1>';
+				input.id=cl.user_id;
+				input.innerHTML = '<h1 class="client_from_list" style="color:#' + cl.color + '">' + cl.nickname + '</h1>';
 				document.querySelector("#player_list").appendChild(input);
 			})
 			
