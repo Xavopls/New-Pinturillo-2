@@ -429,7 +429,6 @@ input[type=range]:focus {
 input[type=range]::-webkit-slider-runnable-track {
 	width: 100%;
 	height: 5px;
-	cursor: pointer;
 	animate: 0.2s;
 	box-shadow: 0px 0px 0px #000000;
 	background: #2497E3;
@@ -443,7 +442,6 @@ input[type=range]::-webkit-slider-thumb {
 	width: 18px;
 	border-radius: 25px;
 	background: #A1D0FF;
-	cursor: pointer;
 	-webkit-appearance: none;
 	margin-top: -6.5px;
 }
@@ -453,7 +451,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 input[type=range]::-moz-range-track {
 	width: 100%;
 	height: 5px;
-	cursor: pointer;
 	animate: 0.2s;
 	box-shadow: 0px 0px 0px #000000;
 	background: #2497E3;
@@ -467,12 +464,10 @@ input[type=range]::-moz-range-thumb {
 	width: 18px;
 	border-radius: 25px;
 	background: #A1D0FF;
-	cursor: pointer;
 }
 input[type=range]::-ms-track {
 	width: 100%;
 	height: 5px;
-	cursor: pointer;
 	animate: 0.2s;
 	background: transparent;
 	border-color: transparent;
@@ -498,7 +493,6 @@ input[type=range]::-ms-thumb {
 	width: 18px;
 	border-radius: 25px;
 	background: #A1D0FF;
-	cursor: pointer;
 }
 input[type=range]:focus::-ms-fill-lower {
 	background: #2497E3;
@@ -518,7 +512,6 @@ input[type=range]:focus::-ms-fill-upper {
 	border-radius:6px;
 	border:1px solid white;
 	display:inline-block;
-	cursor:pointer;
 	color:#212121;
 	font-family:Arial;
 	font-size:15px;
@@ -538,7 +531,6 @@ input[type=range]:focus::-ms-fill-upper {
 	border-radius:6px;
 	border:1px solid white;
 	display:inline-block;
-	cursor:pointer;
 	color:#2096F3;
 	font-family:Arial;
 	font-size:15px;
@@ -558,7 +550,6 @@ input[type=range]:focus::-ms-fill-upper {
 	border-radius:6px;
 	border:1px solid white;
 	display:inline-block;
-	cursor:pointer;
 	color:#009588;
 	font-family:Arial;
 	font-size:15px;
@@ -578,7 +569,6 @@ input[type=range]:focus::-ms-fill-upper {
 	border-radius:6px;
 	border:1px solid white;
 	display:inline-block;
-	cursor:pointer;
 	color:#F44336;
 	font-family:Arial;
 	font-size:15px;
@@ -598,7 +588,6 @@ input[type=range]:focus::-ms-fill-upper {
 	border-radius:6px;
 	border:1px solid white;
 	display:inline-block;
-	cursor:pointer;
 	color:#FFC108;
 	font-family:Arial;
 	font-size:15px;

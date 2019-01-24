@@ -7,13 +7,22 @@ function reciveMessage(author_id, msg) {
 	}
 
 	if (message[Object.keys(message)[0]] == 'mensaje') { //Si es un mensaje lo representamos en el chat
-		var rec = document.createElement("div");
-		rec.className = "incoming_msg"
-		rec.innerHTML = '<div class="received_msg"><div class="received_withd_msg"><p><b style="color:#' + message.color + '">' + message.nickname + ':</b><br>' + message.message + '</p></div></div>';
-		document.querySelector("#messages").appendChild(rec)
-		var audio = document.querySelector('#myAudio');
+
+		var div1 = document.createElement("div")
+		var div2 = document.createElement("div")
+		var p = document.createElement("p")
+
+		p.innerHTML = '<b style="color:#' + message.color + '">' + message.nickname + ':</b><br>' + message.message
+
+		div1.className = "received_msg"
+		div1.appendChild(p)
+
+		div2.className = "received_withd_msg"
+		div2.appendChild(div1)
+		document.querySelector("#messages").appendChild(div2)
 
 		//Detalles fancy del chat
+		var audio = document.querySelector('#myAudio');
 		audio.play()
 		var title = document.querySelector("title");
 		title.innerHTML = "New message!"
@@ -35,10 +44,19 @@ function sendMessage() {
 		var message_text = input.value;
 
 		//Montamos parte visual
-		var element = document.createElement('div');
-		element.className = "outgoing_msg"
-		element.innerHTML = '<div class="sent_msg"><p><b>You:</b><br>' + message_text + '</p></div>';
-		document.querySelector("#messages").appendChild(element);
+		var div1 = document.createElement('div');
+		var div2 = document.createElement('div');
+		var p = document.createElement('p');
+
+		p.innerHTML = '<b>You:</b><br>' + message_text
+
+		div1.className = "sent_msg"
+		div1.appendChild(p)
+
+		div2.className="outgoing_msg"
+		div2.appendChild(div1)
+
+		document.querySelector("#messages").appendChild(div2);
 
 		//Detalles fancy del chat
 		var messages = document.querySelector('#messages');
@@ -74,11 +92,19 @@ function loadClientList() { //Listamos los clientes que hay dentro la sala y tit
 function printClientList(data) { //Montamos el cliente para el html
 	var user_connected = JSON.parse(data)
 
-	var element = document.createElement('p');
-	element.id = user_connected.user_id;
-	element.className = 'conectados'
-	element.innerHTML = '<h1 class="client_from_list" style="color:#' + user_connected.color + '">' + '<span style="color:#00ff21">● </span>' + user_connected.nickname + '</h1>';
-	document.querySelector("#player_list").appendChild(element);
+	var p = document.createElement('p');
+	var h1 = document.createElement('h1');
+
+	h1.className = 'client_from_list'
+	h1.style.color = '#' + user_connected.color
+
+	h1.innerHTML = '<span style="color:#00ff21">● </span>' + user_connected.nickname
+
+	p.id = user_connected.user_id
+	p.className = 'conectados'
+	p.appendChild(h1)
+
+	document.querySelector("#player_list").appendChild(p);
 }
 
 //Escucha de tecla de "Enter" en input de "message"
