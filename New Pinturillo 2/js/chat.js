@@ -123,14 +123,12 @@ send_message.addEventListener("click", sendMessage);
 
 //Escucha de presencia del "mouse" en la pagina para cambiar titulo de la pagina 
 var cuerpo = document.querySelector("html")
-var title = document.querySelector("title");
 
 cuerpo.addEventListener("mousemove", function (e) {
+	var title = document.querySelector("title");
 	var favicon = document.querySelector("#favicon")
 	if (title.innerHTML != 'New Pinturillo 2') { //En el caso que el el titulo sea "New message!" cambiamos de nuevo
 		title.innerHTML = 'New Pinturillo 2'
 		favicon.href="./assets/img/favicon_normal.png"
-
-
 	}
 });
