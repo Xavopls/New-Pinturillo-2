@@ -67,19 +67,13 @@ function joinRoom() {
 			sleep(2000); //Esto pausa para que el cliente que se ha conectado le de tiempo de escribir en el servidor sus datos. Vease la funcion de "new_server.on_ready"
 
 			new_server.loadData((user_id + "_Pinturillo"), function (data) {
-				var temp = JSON.parse(data);
-
-				var element = document.createElement('p');
-				element.id = temp.user_id;
-				element.className = 'conectados'
-				element.innerHTML = '<h1 class="client_from_list" style="color:#' + temp.color + '">' + '<span style="color:#00ff21">● </span>' + temp.nickname + '</h1>';
-				document.querySelector("#player_list").appendChild(element);
+				printClientList(data) //Montamos el cliente para el html
 			})
 		}
 
 		document.querySelector("#login_page_container").style.display = "none"; //Ocultamos login y desplegamos el chat
 		document.querySelector("#game_page_container").style.display = "inline";
-		
+
 		canvasPos = setCanvas(canvas); //Fijamos posición del canvas
 	}
 }
