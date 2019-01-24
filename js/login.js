@@ -20,7 +20,7 @@ client.color = colores[Math.floor(Math.random() * colores.length)];
 
 var new_server;
 var canvasPos;
-var url = "ecv-etic.upf.edu:9000"
+var url = "ecv-etic.upf.edu:9000";
 //ecv-etic.upf.edu:9000
 
 var server = new SillyClient(); //Crea instancia de servidor
