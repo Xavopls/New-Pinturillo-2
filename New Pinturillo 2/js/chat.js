@@ -26,6 +26,8 @@ function reciveMessage(author_id, msg) {
 		audio.play()
 		var title = document.querySelector("title");
 		title.innerHTML = "New message!"
+		var favicon = document.querySelector("#favicon")
+		favicon.href="./assets/img/favicon_blink.png"
 
 		var messages = document.querySelector('#messages');
 		messages.scrollTop = messages.scrollHeight; //Fuerza scroll del chat a estar siempre "bajado"
@@ -122,8 +124,13 @@ send_message.addEventListener("click", sendMessage);
 //Escucha de presencia del "mouse" en la pagina para cambiar titulo de la pagina 
 var cuerpo = document.querySelector("html")
 var title = document.querySelector("title");
+
 cuerpo.addEventListener("mousemove", function (e) {
+	var favicon = document.querySelector("#favicon")
 	if (title.innerHTML != 'New Pinturillo 2') { //En el caso que el el titulo sea "New message!" cambiamos de nuevo
 		title.innerHTML = 'New Pinturillo 2'
+		favicon.href="./assets/img/favicon_normal.png"
+
+
 	}
 });
