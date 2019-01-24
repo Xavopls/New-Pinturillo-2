@@ -27,14 +27,32 @@ function reciveMessage(author_id, msg) {
 		var title = document.querySelector("title");
 		title.innerHTML = "New message!"
 		var favicon = document.querySelector("#favicon")
-		favicon.href="./assets/img/favicon_blink.png"
+		favicon.href = "./assets/img/favicon_blink.png"
 
 		var messages = document.querySelector('#messages');
 		messages.scrollTop = messages.scrollHeight; //Fuerza scroll del chat a estar siempre "bajado"
 	}
 
 	if (message[Object.keys(message)[0]] == 'clean') { //Si es un "clean" limpiamos el canvas
-		limpia()
+
+	}
+
+	if (message[Object.keys(message)[0]] == 'online') {
+		var parent = document.querySelector("#player_list")
+		var child = document.getElementById(author_id)
+		parent.removeChild(child);
+		new_server.loadData((author_id + "_Pinturillo"), function (data) {
+			printClientList(data, true)
+		})
+
+	}
+	if (message[Object.keys(message)[0]] == 'ausente') {
+		var parent = document.querySelector("#player_list")
+		var child = document.getElementById(author_id)
+		parent.removeChild(child);
+		new_server.loadData((author_id + "_Pinturillo"), function (data) {
+			printClientList(data, false)
+		})
 	}
 }
 
@@ -55,7 +73,7 @@ function sendMessage() {
 		div1.className = "sent_msg"
 		div1.appendChild(p)
 
-		div2.className="outgoing_msg"
+		div2.className = "outgoing_msg"
 		div2.appendChild(div1)
 
 		document.querySelector("#messages").appendChild(div2);
@@ -85,22 +103,28 @@ function loadClientList() { //Listamos los clientes que hay dentro la sala y tit
 		info.clients.forEach(function (element) {
 
 			new_server.loadData(element.toString() + "_Pinturillo", function (data) { //Cada user_id lo usamos para descargar sus datos del servidor
-				printClientList(data) //Montamos el cliente para el html
+				printClientList(data, true) //Montamos el cliente para el html
 			})
 		});
 	}
 }
 
-function printClientList(data) { //Montamos el cliente para el html
+function printClientList(data, status) { //Montamos el cliente para el html
 	var user_connected = JSON.parse(data)
-
+	var status_color;
 	var p = document.createElement('p');
 	var h1 = document.createElement('h1');
 
 	h1.className = 'client_from_list'
 	h1.style.color = '#' + user_connected.color
+	if (status == true) {
+		status_color = '#00ff21'
+	}
 
-	h1.innerHTML = '<span style="color:#00ff21">● </span>' + user_connected.nickname
+	if (status == false) {
+		status_color = '#ff7800'
+	}
+	h1.innerHTML = '<span style="color:' + status_color + '">● </span>' + user_connected.nickname
 
 	p.id = user_connected.user_id
 	p.className = 'conectados'
@@ -129,6 +153,21 @@ cuerpo.addEventListener("mousemove", function (e) {
 	var favicon = document.querySelector("#favicon")
 	if (title.innerHTML != 'New Pinturillo 2') { //En el caso que el el titulo sea "New message!" cambiamos de nuevo
 		title.innerHTML = 'New Pinturillo 2'
-		favicon.href="./assets/img/favicon_normal.png"
+		favicon.href = "./assets/img/favicon_normal.png"
+	}
+});
+
+document.addEventListener('visibilitychange', function (e) {
+	if (document.hidden == true) {
+		var clean = {
+			tipo: 'ausente',
+		};
+		new_server.sendMessage(JSON.stringify(clean))
+	}
+	if (document.hidden == false) {
+		var clean = {
+			tipo: 'online',
+		};
+		new_server.sendMessage(JSON.stringify(clean))
 	}
 });

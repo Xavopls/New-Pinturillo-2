@@ -67,7 +67,7 @@ function joinRoom() {
 			sleep(2000); //Esto pausa para que el cliente que se ha conectado le de tiempo de escribir en el servidor sus datos. Vease la funcion de "new_server.on_ready"
 
 			new_server.loadData((user_id + "_Pinturillo"), function (data) {
-				printClientList(data) //Montamos el cliente para el html
+				printClientList(data, true) //Montamos el cliente para el html
 			})
 		}
 

@@ -20,7 +20,7 @@ function draw_pointer(todraw) {
 }
 
 function drawFrame() {
-	
+
 	if (clic == 1) { //Si el "mouse" esta apretado, pintamos el circulo y enviamos un mensaje con los datos del circulo
 		draw_pointer(my_circle)
 		new_server.sendMessage(JSON.stringify(my_circle));
@@ -37,7 +37,7 @@ function setCanvas(el) {
 	var yPosition = 0;
 
 	ctx.drawImage(background, 0, 0); //Pintamos el fondo del canvas
-	
+
 	while (el) {
 		xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
 		yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
@@ -80,7 +80,9 @@ colors.addEventListener("click", function (e) {
 var set_clean = document.querySelector("#clean");
 set_clean.addEventListener("click", function () {
 	limpia()
-	var clean={tipo: 'clean',};
+	var clean = {
+		tipo: 'clean',
+	};
 	new_server.sendMessage(JSON.stringify(clean))
 });
 
