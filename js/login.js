@@ -3,6 +3,7 @@
 	nickname: '',
 	user_id: '',
 	color: '',
+	master: ''
 };
 
 colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
@@ -53,8 +54,8 @@ function joinRoom() {
 			loadClientList(); //Se listan en el html todos los clientes conectados
 		};
 
-		new_server.on_message = function (author_id, msg) { //Al recibir un mensaje se llama a reciveMessage para procesar el msg
-			reciveMessage(author_id, msg);
+		new_server.on_message = function (author_id, msg) { //Al recibir un mensaje se llama a recieveMessage para procesar el msg
+			recieveMessage(author_id, msg);
 		};
 
 		new_server.on_user_disconnected = function (user_id) { //Si se desconecta un cliente se elimina del html

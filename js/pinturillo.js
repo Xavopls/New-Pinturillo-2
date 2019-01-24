@@ -22,7 +22,7 @@ function draw_pointer(todraw) {
 function drawFrame() {
 
 	if (clic == 1) { //Si el "mouse" esta apretado, pintamos el circulo y enviamos un mensaje con los datos del circulo
-		draw_pointer(my_circle)
+		draw_pointer(my_circle);
 		new_server.sendMessage(JSON.stringify(my_circle));
 	}
 
@@ -79,7 +79,7 @@ colors.addEventListener("click", function (e) {
 //Escucha de boton "Clean board" y envio de mensaje al resto de clientes
 var set_clean = document.querySelector("#clean");
 set_clean.addEventListener("click", function () {
-	limpia()
+	limpia();
 	var clean = {
 		tipo: 'clean',
 	};
@@ -90,4 +90,4 @@ set_clean.addEventListener("click", function () {
 var slider = document.querySelector("#slider");
 slider.oninput = function () {
 	my_circle.size = this.value;
-}
+};
