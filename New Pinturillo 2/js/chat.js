@@ -83,8 +83,8 @@ function printClientList(data) { //Montamos el cliente para el html
 
 //Escucha de tecla de "Enter" en input de "message"
 var input_message = document.querySelector('#message')
-input_message.addEventListener("keypress", function (evt) {
-	if (evt.keyCode == '13') {
+input_message.addEventListener("keypress", function (e) {
+	if (e.keyCode == '13') {
 		sendMessage();
 	}
 })
