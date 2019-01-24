@@ -17,13 +17,11 @@ colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
 	'E64D66', '4DB380', 'FF4D4D', '99E6E6', '6666FF'
 ];
 client.color = colores[Math.floor(Math.random() * colores.length)];
-//client.nickname = ''
-//client.room = '';
-//client.user_id = '';
+
 var new_server;
 var canvasPos;
-var url = "ecv-etic.upf.edu:9000"
-//ecv-esup.s.upf.edu:9000
+var url = "localhost:55000"
+//ecv-etic.upf.edu:9000
 
 var server = new SillyClient(); //Crea instancia de servidor
 server.connect(url, ""); //Primera conexion en blanco a servidor
@@ -31,104 +29,84 @@ server.connect(url, ""); //Primera conexion en blanco a servidor
 //Listado de las salas
 server.getReport(function (report) {
 	for (sala in report.rooms) {
-		var sa = decodeURI(sala)
-		if (sa != "") {
+		var name_room = decodeURI(sala) //decodeURI para que no nos de caracteres raros tipo espacios como %20
+		if (name_room != "") {
 			var element = document.createElement("option");
-			element.innerHTML = sa;
-			element.value = sa;
+			element.innerHTML = name_room;
+			element.value = name_room;
 			document.querySelector("#select_room").appendChild(element);
 		}
 	}
 });
 
 //Entrar en una sala
-function j_room() {
+function joinRoom() {
 
 	if (client.nickname != '' && client.room != '') {
-		server.close();
-		new_server = new SillyClient();
+		server.close(); //Cierra conexion primer servidor
+		new_server = new SillyClient(); //Abre nueva conexion con servidor con una sala predeterminada
 		new_server.connect(url, client.room);
 
-		new_server.on_ready = function (id) {
+		new_server.on_ready = function (id) { //Cuano se obtiene una id primero se guarda en el servior los datos del cliente
 			client.user_id = id;
 			new_server.storeData(id + "_Pinturillo", JSON.stringify(client));
-			loadClientList();
-
+			loadClientList(); //Se listan en el html todos los clientes conectados
 		};
 
-
-		new_server.on_message = function (author_id, msg) {
+		new_server.on_message = function (author_id, msg) { //Al recibir un mensaje se llama a reciveMessage para procesar el msg
 			reciveMessage(author_id, msg);
-
 		};
 
-
-
-		new_server.on_user_connected = function (user_id) {
-			sleep(2000);
-			var cargar = user_id + "_Pinturillo"
-			console.log(cargar)
-			//Borra tots els fills
-			new_server.loadData(cargar, function (data) {
-
-
-
-				var cl = JSON.parse(data);
-
-				var input = document.createElement('p');
-				input.id = cl.user_id;
-				input.className = 'conectados'
-				input.innerHTML = '<h1 class="client_from_list" style="color:#' + cl.color + '">' + '<span style="color:#00ff21">● </span>' + cl.nickname + '</h1>';
-				document.querySelector("#player_list").appendChild(input);
-			})
-
-
-
-		}
-
-
-		new_server.on_user_disconnected = function (user_id) {
+		new_server.on_user_disconnected = function (user_id) { //Si se desconecta un cliente se elimina del html
 			var parent = document.querySelector("#player_list")
 			var child = document.getElementById(user_id)
 			parent.removeChild(child);
 		}
 
+		new_server.on_user_connected = function (user_id) { //Si se conecta un cliente se añade en la lista del html
+			sleep(2000); //Esto pausa para que el cliente que se ha conectado le de tiempo de escribir en el servidor sus datos. Vease la funcion de "new_server.on_ready"
 
+			new_server.loadData((user_id + "_Pinturillo"), function (data) {
+				var temp = JSON.parse(data);
 
-		document.querySelector("#login_page_container").style.display = "none";
+				var element = document.createElement('p');
+				element.id = temp.user_id;
+				element.className = 'conectados'
+				element.innerHTML = '<h1 class="client_from_list" style="color:#' + temp.color + '">' + '<span style="color:#00ff21">● </span>' + temp.nickname + '</h1>';
+				document.querySelector("#player_list").appendChild(element);
+			})
+		}
+
+		document.querySelector("#login_page_container").style.display = "none"; //Ocultamos login y desplegamos el chat
 		document.querySelector("#game_page_container").style.display = "inline";
-
-		//aixo esta copiat https://www.kirupa.com/canvas/follow_mouse_cursor.htm
-		canvasPos = setCanvas(canvas);
+		
+		canvasPos = setCanvas(canvas); //Fijamos posición del canvas
 	}
-
-
 }
 
-
-
-
-
+//Escucha de boton Create room
 var set_createroom = document.querySelector("#set_createroom");
 set_createroom.addEventListener("click", function () {
 	client.room = document.querySelector("#createroom").value;
 	client.nickname = document.querySelector("#nickname").value;
-	j_room();
+	joinRoom();
 });
 
+//Escucha de boton Join room
 var join_room = document.querySelector("#join_room");
 join_room.addEventListener("click", function () {
 	var select_room = document.getElementById("select_room");
 	client.room = select_room.options[select_room.selectedIndex].value;
 	client.nickname = document.querySelector("#nickname").value;
-	j_room();
+	joinRoom();
 });
 
-//copiat de https://www.phpied.com/sleep-in-javascript/
+//Funcion sleep() para ganar tiempo
+//inspirado en https://www.phpied.com/sleep-in-javascript/
 function sleep(milliseconds) {
-	var start = new Date().getTime();
+	var now = new Date().getTime();
 	for (var i = 0; i < 1e7; i++) {
-		if ((new Date().getTime() - start) > milliseconds) {
+		if ((new Date().getTime() - now) > milliseconds) {
 			break;
 		}
 	}
