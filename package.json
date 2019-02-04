@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Xavopls/New-Pinturillo-2#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "express-ws": "^4.0.0",
     "nodemon": "^1.18.9",
     "websocket": "^1.0.28"
   }
