@@ -33,8 +33,6 @@ server.listen(port, function (){
     console.log("Server running at port: ", port);
 });
 
-
-
 // WEB SOCKET
 
 var WebSocketServer = require('websocket').server;
