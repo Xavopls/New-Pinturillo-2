@@ -82,19 +82,23 @@ function joinRoom() {
 //Escucha de boton Create room
 var set_createroom = document.querySelector("#set_createroom");
 set_createroom.addEventListener("click", function () {
-	client.room = document.querySelector("#createroom").value;
-	client.nickname = document.querySelector("#nickname").value;
-	joinRoom();
+	var room_name = document.querySelector("#createroom").value;
+	var user_name = document.querySelector("#nickname").value;
+	if (room_name.length > 0 && user_name.length > 0){
+		cl_createRoom(room_name, user_name);
+	}
 });
 
 //Escucha de boton Join room
 var join_room = document.querySelector("#join_room");
 join_room.addEventListener("click", function () {
 	var select_room = document.getElementById("select_room");
+	cl_listRooms();
 	client.room = select_room.options[select_room.selectedIndex].value;
 	client.nickname = document.querySelector("#nickname").value;
 	joinRoom();
 });
+
 
 //Funcion sleep() para ganar tiempo
 //inspirado en https://www.phpied.com/sleep-in-javascript/
