@@ -54,9 +54,18 @@ wss.on('connection', function (client) {
     client.color = colores[Math.floor(Math.random() * colores.length)];
 
     client.on('message', function (message) {
-        switch (message.msg_type) {
+        console.log('%s --- Received: %s', new Date().toLocaleString(), message);
+        var client_msg = '';
+        try {
+            client_msg = JSON.parse(message);
+        } catch(e) {
+            return
+        }
+
+        switch (client_msg.msg_type) {
             case 'create_room':
-                room.name = message.room_name;
+                console.log('create_room');
+                room.name = client_msg.room_name;
                 room.id = id_room_counter;
                 room.clients.push(client);
                 id_room_counter++;
@@ -66,25 +75,19 @@ wss.on('connection', function (client) {
                 break;
 
             case 'join_room':
-
+                console.log('join_room');
                 break;
+
             case 'list_rooms':
+                console.log(room_list);
                 var msg = {
                     'msg_type': 'room_list',
-                    'data': room_list
+                    'rooms': room_list
                 };
                 client.send(JSON.stringify(msg));
                 break;
-
         }
-        console.log('received: %s', message)
     });
-    console.log('WS', client);
-    setInterval(
-        () => client.send('AOOOOOOOOOOOOOOOOOOOOOOOOO DURO'),
-        1000
-
-    )
 });
 
 

@@ -1,10 +1,4 @@
-﻿var client = {
-	room: '',
-	nickname: '',
-	user_id: '',
-	color: '',
-	master: ''
-};
+﻿var client = new Client();
 
 colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
 	'E6B333', '3366E6', '999966', '99FF99', 'B34D4D',
@@ -17,6 +11,7 @@ colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
 	'FF3380', 'CCCC00', '66E64D', '4D80CC', '9900B3',
 	'E64D66', '4DB380', 'FF4D4D', '99E6E6', '6666FF'
 ];
+
 client.color = colores[Math.floor(Math.random() * colores.length)];
 
 var new_server;
@@ -24,21 +19,7 @@ var canvasPos;
 var url = "ecv-etic.upf.edu:9000";
 //ecv-etic.upf.edu:9000
 
-var server = new SillyClient(); //Crea instancia de servidor
-server.connect(url, ""); //Primera conexion en blanco a servidor
 
-//Listado de las salas
-server.getReport(function (report) {
-	for (sala in report.rooms) {
-		var name_room = decodeURI(sala) //decodeURI para que no nos de caracteres raros tipo espacios como %20
-		if (name_room != "") {
-			var element = document.createElement("option");
-			element.innerHTML = name_room;
-			element.value = name_room;
-			document.querySelector("#select_room").appendChild(element);
-		}
-	}
-});
 
 //Entrar en una sala
 function joinRoom() {
@@ -85,19 +66,41 @@ set_createroom.addEventListener("click", function () {
 	var room_name = document.querySelector("#createroom").value;
 	var user_name = document.querySelector("#nickname").value;
 	if (room_name.length > 0 && user_name.length > 0){
-		cl_createRoom(room_name, user_name);
+		client.create_room(room_name, user_name);
 	}
+});
+
+
+var dropdown_rooms = document.querySelector("#dropdown_rooms");
+dropdown_rooms.addEventListener("click", function () {
+	console.log("Dropdown rooms Click");
+	client.list_rooms(on_rooms_received);
 });
 
 //Escucha de boton Join room
 var join_room = document.querySelector("#join_room");
 join_room.addEventListener("click", function () {
 	var select_room = document.getElementById("select_room");
-	cl_listRooms();
 	client.room = select_room.options[select_room.selectedIndex].value;
 	client.nickname = document.querySelector("#nickname").value;
-	joinRoom();
 });
+
+function on_rooms_received(msg) {
+	console.log(msg);
+	var data = JSON.parse(msg.data);
+	var rooms = data.rooms;
+	console.log(rooms);
+	console.log("on_rooms_received");
+	rooms.forEach((sala) => {
+		var name_room = decodeURI(sala); //decodeURI para que no nos de caracteres raros tipo espacios como %20
+		if (name_room) {
+			var element = document.createElement("option");
+			element.innerHTML = name_room;
+			element.value = name_room;
+			document.querySelector("#select_room").appendChild(element);
+		}
+	});
+}
 
 
 //Funcion sleep() para ganar tiempo
