@@ -11,6 +11,7 @@ function Client()
     this.nickname = '';
     this.user_id = '';
     this.color = '';
+    this.status ='';
 
     this.connect = () => {
         this.ws.send("Hi!")
@@ -42,6 +43,15 @@ function Client()
         var message = {
             'view' : 'login_page',
             'msg_type': 'list_rooms',
+        };
+        this.ws.send(JSON.stringify(message));
+        this.ws.onmessage = callback_fn
+    }
+
+    this.show_user_list = (callback_fn) => {
+        var message = {
+            'view' : 'chat',
+            'msg_type' : 'show_user_list'
         };
         this.ws.send(JSON.stringify(message));
         this.ws.onmessage = callback_fn

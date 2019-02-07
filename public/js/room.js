@@ -1,4 +1,4 @@
-function loadClientList() { //Listamos los clientes que hay dentro la sala y titulamos la pagina en el html
+/*function loadClientList() { //Listamos los clientes que hay dentro la sala y titulamos la pagina en el html
     new_server.on_room_info = function (info) {
 
         document.querySelector("#room_title").textContent += decodeURI(info.name);
@@ -11,7 +11,19 @@ function loadClientList() { //Listamos los clientes que hay dentro la sala y tit
         });
     }
 }
+*/
 
+
+// LIST USERS IN THE SAME ROOM
+
+client.show_user_list(on_user_list_shown);
+
+function on_user_list_shown(msg){
+    var data = JSON.parse(msg.data);
+    console.log('DATAAAAAAAAAAAAAAAAAAAAA ', data);
+
+}
+/*
 function printClientList(data, status) { //Montamos el cliente para el html
     var user_connected = JSON.parse(data);
     var status_color;
@@ -62,3 +74,4 @@ document.addEventListener('visibilitychange', function (e) {
     }
 });
 
+*/

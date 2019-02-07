@@ -77,15 +77,15 @@ wss.on('connection', function (client) {
                             'msg_type': 'create_room',
                             'status': 'OK'
                         };
-                        // Y CREAR ALGUN SERVIDOR, SOCKET O INSTANCIAR ALGO PARA CREAR UNA SALA EN SÍ.
                         client.send(JSON.stringify(msg));
+                        /*
                         console.log('\n\n');
                         console.log('CURRENT ROOM: ', room);
                         console.log('\n\n');
 
                         console.log('CURRENT CLIENT: ', client);
                         console.log('\n\n');
-
+                        */
                     }
                     // SI LA SALA YA EXISTE
                     else {
@@ -131,7 +131,17 @@ wss.on('connection', function (client) {
 
         else if (client_msg.view === 'chat'){
             switch (client_msg.msg_type) {
-                case 'list_online_clients':
+                case 'show_user_list':
+                    for(var i=0; i<room_list.length;i++){
+                        console.log('ROOM: ', room_list[i]);
+                        if (room_list[i].name === client.room){
+                            console.log(' CLIENNT LIST FROM ROOM: ',room_list[i].clients);
+                            var msg = {
+
+                            };
+                            break;
+                        }
+                    }
                     break;
 
                 case 'paint_canvas':
