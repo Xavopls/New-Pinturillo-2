@@ -123,21 +123,23 @@ wss.on('connection', function (client) {
                         'msg_type': 'room_list',
                         'rooms': room_ids
                     };
-                    JSON.stringify(msg, function( key, value) {
-                        if(key == 'Room') {
-                            return value.id;
-                        } else {
-                            return value;
-                        }
-                    });
-
-                    client.send(JSON.stringify(msg), );
+                    JSON.stringify(msg);
+                    client.send(JSON.stringify(msg));
                     break;
             }
         }
 
         else if (client_msg.view === 'chat'){
+            switch (client_msg.msg_type) {
+                case 'list_online_clients':
+                    break;
 
+                case 'paint_canvas':
+                    break;
+
+                case 'send_message':
+                    break;
+            }
         }
 
     });
