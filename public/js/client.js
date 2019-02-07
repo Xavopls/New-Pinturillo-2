@@ -16,39 +16,34 @@ function Client()
         this.ws.send("Hi!")
     };
 
-    this.join_room = (room_name, client_name) => {
+    this.join_room = (room_name, client_name, callback_fn) => {
         var message = {
+            'view' : 'login_page',
             'msg_type': 'join_room',
             'room_name': room_name,
             'client_name': client_name
         };
         this.ws.send(JSON.stringify(message));
+        this.ws.onmessage = callback_fn
     };
 
-    this.create_room = (room_name, client_name) => {
+    this.create_room = (room_name, client_name, callback_fn) => {
         var message = {
+            'view' : 'login_page',
             'msg_type': 'create_room',
             'room_name': room_name,
             'client_name': client_name
         };
         this.ws.send(JSON.stringify(message));
+        this.ws.onmessage = callback_fn
     };
 
     this.list_rooms = (callback_fn) => {
         var message = {
+            'view' : 'login_page',
             'msg_type': 'list_rooms',
         };
         this.ws.send(JSON.stringify(message));
         this.ws.onmessage = callback_fn
     }
 }
-
-// event emmited when receiving message
-// ws.onmessage = function (ev) {
-//     console.log(ev.data);
-//     switch (ev.data.msg_type) {
-//         case 'room_list':
-//             return ev.data.data;
-//     }
-//     //
-// };

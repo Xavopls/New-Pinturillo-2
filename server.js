@@ -10,6 +10,12 @@ app.listen(port, function () {
 });
 
 
+function Room(){
+    this.name = '';
+    this.clients = [];
+    this.id = '';
+}
+
 colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
     'E6B333', '3366E6', '999966', '99FF99', 'B34D4D',
     '80B300', '809900', 'E6B3B3', '6680B3', '66991A',
@@ -22,24 +28,10 @@ colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
     'E64D66', '4DB380', 'FF4D4D', '99E6E6', '6666FF'
 ];
 
-// CLASSES
-/*
-var room = {
-    "id" : 0,
-    "client_list": []
-};
-*/
 var room_list = [];
-room_list.push('asd1');
-room_list.push('asd2');
+// room_list.push('asd1');
+// room_list.push('asd2');
 
-var client = {
-    'id': 0,
-    'busy': false,
-    'room': '',
-    'nickname' : '',
-    'color': ''
-};
 var id_client_counter = 1;
 var id_room_counter = 1;
 
@@ -61,51 +53,93 @@ wss.on('connection', function (client) {
         } catch(e) {
             return
         }
+        if (client_msg.view === 'login_page') {
+            switch (client_msg.msg_type) {
+                case 'create_room':
+                    // Miramos si existe
+                    var repeated = false;
+                    for (var i = 0; i<room_list.length;i++){
+                        if (client_msg.room_name === room_list[i].name) repeated = true;
+                    }
+                    // SI LA SALA NO EXISTE
+                    if (!repeated){
+                        console.log('create_room');
+                        var room = new Room();
+                        room.name = client_msg.room_name;
+                        room.id = id_room_counter;
+                        room.clients.push(client);
+                        client.room = room;
+                        id_client_counter++;
+                        room_list.push(room);
+                        id_room_counter++;
 
-        switch (client_msg.msg_type) {
-            case 'create_room':
-                console.log('create_room');
-                room.name = client_msg.room_name;
-                room.id = id_room_counter;
-                room.clients.push(client);
-                id_room_counter++;
-                room_list.push(room);
-                // FALTA DEVOLVER AL CLIENTE EL OK PARA QUE ESTE MODIFIQUE EL FRONTEND
-                // Y CREAR ALGUN SERVIDOR, SOCKET O INSTANCIAR ALGO PARA CREAR UNA SALA EN SÍ.
-                break;
+                        var msg = {
+                            'msg_type': 'create_room',
+                            'status': 'OK'
+                        };
+                        // Y CREAR ALGUN SERVIDOR, SOCKET O INSTANCIAR ALGO PARA CREAR UNA SALA EN SÍ.
+                        client.send(JSON.stringify(msg));
+                        console.log('\n\n');
+                        console.log('CURRENT ROOM: ', room);
+                        console.log('\n\n');
 
-            case 'join_room':
-                console.log('join_room');
-                break;
+                        console.log('CURRENT CLIENT: ', client);
+                        console.log('\n\n');
 
-            case 'list_rooms':
-                console.log(room_list);
-                var msg = {
-                    'msg_type': 'room_list',
-                    'rooms': room_list
-                };
-                client.send(JSON.stringify(msg));
-                break;
+                    }
+                    // SI LA SALA YA EXISTE
+                    else {
+                        var msg = {
+                            'msg_type': 'create_room',
+                            'status': 'repeated'
+                        }
+                        client.send(JSON.stringify(msg));
+                    }
+
+                    break;
+
+                case 'join_room':
+                    client.room = client_msg.room_name;
+                    for (var i = 0; i<room_list.length;i++){
+                        if (client_msg.room_name === room_list[i].name){
+                            room_list[i].clients.push(client);
+                        }
+                    }
+
+                    var msg = {
+                        'msg_type': 'join_room',
+                        'status': 'OK'
+                    };
+                    client.send(JSON.stringify(msg));
+                    break;
+
+                case 'list_rooms':
+                    console.log(room_list);
+                    var room_ids = [];
+                    for (var i = 0; i<room_list.length; i++){
+                        room_ids.push(room_list[i].name);
+                    }
+                    var msg = {
+                        'msg_type': 'room_list',
+                        'rooms': room_ids
+                    };
+                    JSON.stringify(msg, function( key, value) {
+                        if(key == 'Room') {
+                            return value.id;
+                        } else {
+                            return value;
+                        }
+                    });
+
+                    client.send(JSON.stringify(msg), );
+                    break;
+            }
         }
+
+        else if (client_msg.view === 'chat'){
+
+        }
+
     });
 });
-
-
-// LOGIN PAGE
-function createRoom(){
-
-}
-
-function joinRoom() {
-
-}
-
-function showRooms(){
-
-}
-
-function hideLogin() {
-    
-}
-
 

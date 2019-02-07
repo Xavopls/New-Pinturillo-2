@@ -7,6 +7,7 @@ function recieveMessage(author_id, msg) {
 	}
 
 	if (message[Object.keys(message)[0]] == 'mensaje') { //Si es un mensaje lo representamos en el chat
+	if (message[Object.keys(message)[0]] == 'mensaje') { //Si es un mensaje lo representamos en el chat
 
 		var div1 = document.createElement("div");
 		var div2 = document.createElement("div");

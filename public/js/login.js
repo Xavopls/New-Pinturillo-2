@@ -1,28 +1,12 @@
 ﻿var client = new Client();
 
-colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
-	'E6B333', '3366E6', '999966', '99FF99', 'B34D4D',
-	'80B300', '809900', 'E6B3B3', '6680B3', '66991A',
-	'FF99E6', 'CCFF1A', 'FF1A66', 'E6331A', '33FFCC',
-	'66994D', 'B366CC', '4D8000', 'B33300', 'CC80CC',
-	'66664D', '991AFF', 'E666FF', '4DB3FF', '1AB399',
-	'E666B3', '33991A', 'CC9999', 'B3B31A', '00E680',
-	'4D8066', '809980', 'E6FF80', '1AFF33', '999933',
-	'FF3380', 'CCCC00', '66E64D', '4D80CC', '9900B3',
-	'E64D66', '4DB380', 'FF4D4D', '99E6E6', '6666FF'
-];
-
-client.color = colores[Math.floor(Math.random() * colores.length)];
-
 var new_server;
 var canvasPos;
-var url = "ecv-etic.upf.edu:9000";
-//ecv-etic.upf.edu:9000
 
 
 
 //Entrar en una sala
-function joinRoom() {
+/*function joinRoom() {
 
 	if (client.nickname != '' && client.room != '') {
 		server.close(); //Cierra conexion primer servidor
@@ -53,56 +37,99 @@ function joinRoom() {
 			})
 		}
 
-		document.querySelector("#login_page_container").style.display = "none"; //Ocultamos login y desplegamos el chat
-		document.querySelector("#game_page_container").style.display = "inline";
 
-		canvasPos = setCanvas(canvas); //Fijamos posición del canvas i pintamos el fondo
 	}
 }
+*/
 
-//Escucha de boton Create room
+
+
+
+
+
+
+// CREATE ROOM
 var set_createroom = document.querySelector("#set_createroom");
 set_createroom.addEventListener("click", function () {
 	var room_name = document.querySelector("#createroom").value;
 	var user_name = document.querySelector("#nickname").value;
 	if (room_name.length > 0 && user_name.length > 0){
-		client.create_room(room_name, user_name);
+		client.create_room(room_name, user_name, on_room_created);
 	}
 });
 
-
-var dropdown_rooms = document.querySelector("#dropdown_rooms");
-dropdown_rooms.addEventListener("click", function () {
-	console.log("Dropdown rooms Click");
-	client.list_rooms(on_rooms_received);
-});
-
-//Escucha de boton Join room
-var join_room = document.querySelector("#join_room");
-join_room.addEventListener("click", function () {
-	var select_room = document.getElementById("select_room");
-	client.room = select_room.options[select_room.selectedIndex].value;
-	client.nickname = document.querySelector("#nickname").value;
-});
-
-function on_rooms_received(msg) {
-	console.log(msg);
+function on_room_created(msg) {
 	var data = JSON.parse(msg.data);
-	var rooms = data.rooms;
-	console.log(rooms);
-	console.log("on_rooms_received");
-	rooms.forEach((sala) => {
-		var name_room = decodeURI(sala); //decodeURI para que no nos de caracteres raros tipo espacios como %20
-		if (name_room) {
-			var element = document.createElement("option");
-			element.innerHTML = name_room;
-			element.value = name_room;
-			document.querySelector("#select_room").appendChild(element);
-		}
-	});
+	switch (data.status) {
+		case 'repeated':
+			alert('Room name already exists');
+			break;
+
+		case 'OK':
+			document.querySelector("#login_page_container").style.display = "none"; //Ocultamos login y desplegamos el chat
+			document.querySelector("#game_page_container").style.display = "inline";
+			canvasPos = setCanvas(canvas); //Fijamos posición del canvas i pintamos el fondo
+			break;
+
+	}
 }
 
 
+// JOIN ROOM
+var join_room = document.querySelector("#join_room");
+join_room.addEventListener("click", function () {
+	var select_room = document.getElementById("select_room");
+	var joined_room = select_room.options[select_room.selectedIndex].value;
+	var client_nick = document.querySelector("#nickname").value;
+	if(client_nick.length > 0){
+		client.join_room(joined_room,client_nick, on_room_joined);
+	}
+});
+
+function on_room_joined(msg){
+	var data = JSON.parse(msg.data);
+	switch (data.status) {
+		case 'repeated':
+			alert('Room does not exist, try refreshing the page');
+			break;
+
+		case 'OK':
+			document.querySelector("#login_page_container").style.display = "none"; //Ocultamos login y desplegamos el chat
+			document.querySelector("#game_page_container").style.display = "inline";
+			canvasPos = setCanvas(canvas); //Fijamos posición del canvas i pintamos el fondo
+			break;
+
+	}
+}
+
+
+
+
+// LIST ROOMS
+var dropdown_rooms = document.querySelector("#dropdown_rooms");
+dropdown_rooms.addEventListener("click", function () {
+	client.list_rooms(on_rooms_received);
+});
+
+function on_rooms_received(msg){
+	var data = JSON.parse(msg.data);
+	var rooms = data.rooms;
+	console.log(rooms);
+
+		rooms.forEach((sala) => {
+			var name_room = decodeURI(sala); //decodeURI para que no nos de caracteres raros tipo espacios como %20
+			if (name_room) {
+					var element = document.createElement("option");
+					element.innerHTML = name_room;
+					element.value = name_room;
+					document.querySelector("#select_room").appendChild(element);
+			}
+		});
+}
+
+
+
+/*
 //Funcion sleep() para ganar tiempo
 //inspirado en https://www.phpied.com/sleep-in-javascript/
 function sleep(milliseconds) {
@@ -113,3 +140,6 @@ function sleep(milliseconds) {
 		}
 	}
 }
+*/
+
+
