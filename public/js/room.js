@@ -1,3 +1,26 @@
+
+// LIST USERS IN THE SAME ROOM
+
+function show_user_list(){
+    client.show_user_list(on_user_list_shown);    
+}
+
+function on_user_list_shown(msg){
+    var data = JSON.parse(msg.data);
+    switch(data.status){
+        case 'OK':
+            console.log('USER LIST:', data.user_list);
+            break;
+
+        case 'ERROR':
+            console.log('ERROR');
+            break;
+    }
+}
+
+
+
+
 /*function loadClientList() { //Listamos los clientes que hay dentro la sala y titulamos la pagina en el html
     new_server.on_room_info = function (info) {
 
@@ -14,15 +37,8 @@
 */
 
 
-// LIST USERS IN THE SAME ROOM
 
-client.show_user_list(on_user_list_shown);
 
-function on_user_list_shown(msg){
-    var data = JSON.parse(msg.data);
-    console.log('DATAAAAAAAAAAAAAAAAAAAAA ', data);
-
-}
 /*
 function printClientList(data, status) { //Montamos el cliente para el html
     var user_connected = JSON.parse(data);

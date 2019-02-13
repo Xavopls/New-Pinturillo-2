@@ -12,6 +12,7 @@ function Client()
     this.user_id = '';
     this.color = '';
     this.status ='';
+    this.nickname = '';
 
     this.connect = () => {
         this.ws.send("Hi!")
@@ -22,7 +23,7 @@ function Client()
             'view' : 'login_page',
             'msg_type': 'join_room',
             'room_name': room_name,
-            'client_name': client_name
+            'nickname': client_name
         };
         this.ws.send(JSON.stringify(message));
         this.ws.onmessage = callback_fn
@@ -33,7 +34,7 @@ function Client()
             'view' : 'login_page',
             'msg_type': 'create_room',
             'room_name': room_name,
-            'client_name': client_name
+            'nickname': client_name
         };
         this.ws.send(JSON.stringify(message));
         this.ws.onmessage = callback_fn
