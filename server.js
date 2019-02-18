@@ -13,7 +13,7 @@ colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
 var room_list = [];
 var room_list_by_id = {};
 
-
+var
 var id_client_counter = 1;
 var id_room_counter = 1;
 
@@ -35,6 +35,8 @@ function Room(){
     this.clients = [];
     this.id = '';
     this.client_list_by_nickname = [];
+    this.painted_areas = [];
+    this.chat_messages = [];
 }
 
 
@@ -77,6 +79,7 @@ wss.on('connection', function (client) {
                     break;
 
                 case 'send_message':
+                    sendMessage(client);
                     break;
             }
 
@@ -191,4 +194,12 @@ function updateClients(room) {
     for (var i = 0; i< room.clients.length; i++){
         room.clients[i].send(JSON.stringify(msg));
     }
+}
+
+function sendMessage(room, cl_message) {
+    var msg = {
+        'msg_type': 'list_users',
+        'status': 'OK',
+        'message': cl_message
+    }; 
 }
