@@ -104,8 +104,40 @@ input_message.addEventListener("keypress", function (e) {
 	if (e.keyCode == '13') {
 		sendChatMessage();
 	}
-})
+})}
 
 //Escucha de boton Send
-var send_message = document.querySelector("#send");
-send_message.addEventListener("click", sendChatMessage);
+var send_button = document.querySelector("#send");
+send_button.addEventListener("click", send_message);
+
+
+function send_message(){
+	client.send_message(on_message_sent);
+}
+
+function on_message_sent(msg) {
+
+	var div1 = document.createElement("div");
+	var div2 = document.createElement("div");
+	var p = document.createElement("p");
+
+	p.innerHTML = '<b style="color:#' + client.color + '">' + client.nickname + ':</b><br>' + msg.content;
+
+	div1.className = "received_msg";
+	div1.appendChild(p);
+
+	dliv2.className = "received_withd_msg";
+	div2.appendChild(div1);
+	document.querySelector("#messages").appendChild(div2);
+
+	//Detalles fancy del chat
+	var audio = document.querySelector('#myAudio');
+	audio.play();
+	var title = document.querySelector("title");
+	title.innerHTML = "New message!";
+	var favicon = document.querySelector("#favicon");
+	favicon.href = "./assets/img/favicon_blink.png";
+
+	var messages = document.querySelector('#messages');
+	messages.scrollTop = messages.scrollHeight; //Fuerza scroll del chat a estar siempre "bajado"
+}

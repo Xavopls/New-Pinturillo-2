@@ -12,8 +12,6 @@ colores = ['FF6633', 'FFB399', 'FF33FF', 'FFFF99', '00B3E6',
 ];
 var room_list = [];
 var room_list_by_id = {};
-
-var
 var id_client_counter = 1;
 var id_room_counter = 1;
 
@@ -197,9 +195,12 @@ function updateClients(room) {
 }
 
 function sendMessage(room, cl_message) {
+    room.chat_messages.push(cl_message);
     var msg = {
-        'msg_type': 'list_users',
+        'msg_type': 'send_message',
         'status': 'OK',
-        'message': cl_message
-    }; 
+        'content': cl_message
+    };
+    JSON.stringify(msg);
+    client.send(JSON.stringify(msg));
 }
