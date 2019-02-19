@@ -77,7 +77,11 @@ wss.on('connection', function (client) {
                     break;
 
                 case 'send_message':
-                    sendMessage(client);
+                    sendMessage(client, client_msg.content);
+                    break;
+
+                case 'update_chat':
+                    updateChat(client);
                     break;
             }
 
@@ -194,13 +198,36 @@ function updateClients(room) {
     }
 }
 
-function sendMessage(room, cl_message) {
-    room.chat_messages.push(cl_message);
-    var msg = {
+function sendMessage(client, cl_message) {
+    for(var i=0; i<room_list.length;i++) {
+        if (room_list[i].id === client.room.id) {
+            room_list[i].chat_messages.push([client.id, cl_message]);
+        }
+    }
+        var msg = {
         'msg_type': 'send_message',
         'status': 'OK',
         'content': cl_message
     };
     JSON.stringify(msg);
     client.send(JSON.stringify(msg));
+}
+
+function updateChat(client) {
+    for(var i=0; i<room_list.length;i++) {
+        if (room_list[i].id === client.room.id) {
+            var msg = {
+                'msg_type': 'update_chat',
+                'status': 'OK',
+                'data': room_list[i].chat_messages
+            };
+            for(var j = 0; j<room_list[i].clients.length; j++){
+                if (room_list[i].clients[j].nickname !== client.nickname){
+                    room_list[i].clients[j].send(JSON.stringify(msg));
+                }
+            }
+        }
+    }
+
+
 }

@@ -57,12 +57,28 @@ function recieveMessage(author_id, msg) {
 	}
 }
 
-function sendChatMessage() {
+
+
+//Escucha de tecla de "Enter" en input de "message"
+var input_message = document.querySelector('#message');
+input_message.addEventListener("keypress", function (e) {
+	if (e.keyCode == '13') {
+		sendChatMessage();
+	}
+})}
+
+//Escucha de boton Send
+var send_button = document.querySelector("#send");
+send_button.addEventListener("click", sendChatMessage);
+
+
+function sendChatMessage(){
 	var input = document.querySelector("#message");
 	if (input.value != '') { //No podemos enviar mensajes vacios
+		var message_text = input.value;
 
 		var message = {};
-		var message_text = input.value;
+
 
 		//Montamos parte visual
 		var div1 = document.createElement('div');
@@ -89,37 +105,25 @@ function sendChatMessage() {
 		message.nickname = client.nickname;
 		message.color = client.color;
 
-		new_server.sendMessage(JSON.stringify(message));
-
 		//Detalles fancy del chat
 		input.value = "";
+
+		client.send_message(message_text, on_message_sent);
+
 	}
-}
-
-
-
-//Escucha de tecla de "Enter" en input de "message"
-var input_message = document.querySelector('#message');
-input_message.addEventListener("keypress", function (e) {
-	if (e.keyCode == '13') {
-		sendChatMessage();
-	}
-})}
-
-//Escucha de boton Send
-var send_button = document.querySelector("#send");
-send_button.addEventListener("click", send_message);
-
-
-function send_message(){
-	client.send_message(on_message_sent);
 }
 
 function on_message_sent(msg) {
+	var data = JSON.parse(msg.data);
 
+	switch (data.status) {
+		case 'OK':
+		break;
+	}
+}
+/*
 	var div1 = document.createElement("div");
 	var div2 = document.createElement("div");
-	var p = document.createElement("p");
 
 	p.innerHTML = '<b style="color:#' + client.color + '">' + client.nickname + ':</b><br>' + msg.content;
 
@@ -140,4 +144,6 @@ function on_message_sent(msg) {
 
 	var messages = document.querySelector('#messages');
 	messages.scrollTop = messages.scrollHeight; //Fuerza scroll del chat a estar siempre "bajado"
-}
+
+	*/
+

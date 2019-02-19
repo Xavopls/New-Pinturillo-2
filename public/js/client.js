@@ -1,8 +1,12 @@
 function Client()
 {
     this.ws = new WebSocket('ws://localhost:9048');
-    this.ws.onopen = () => {
+    this.ws.z = () => {
         console.log('Websocket connected!');
+        this.ws.onmessage = function (event) {
+            console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+            console.log(event)
+        };
         // sending a send event to websocket server
         this.ws.send('connected')
     };
@@ -17,6 +21,7 @@ function Client()
     this.connect = () => {
         this.ws.send("You are connected!")
     };
+
 
     this.join_room = (room_name, client_name, callback_fn) => {
         var message = {
@@ -40,7 +45,7 @@ function Client()
 
     this.list_rooms = (callback_fn) => {
         var message = {
-            'msg_type': 'list_rooms',
+            'msg_type': 'list_rooms'
         };
         this.ws.send(JSON.stringify(message));
         this.ws.onmessage = callback_fn
@@ -61,4 +66,5 @@ function Client()
         this.ws.send(JSON.stringify(message));
         this.ws.onmessage = callback_fn
     }
+
 }
