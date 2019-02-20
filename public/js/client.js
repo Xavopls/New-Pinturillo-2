@@ -1,5 +1,7 @@
 function Client() {
+
     this.ws = new WebSocket('ws://localhost:9048');
+    //this.ws = new WebSocket('ws://ecv-etic.upf.edu:9048');
     this.ws.z = () => {
         console.log('Websocket connected!');
 
