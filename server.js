@@ -78,11 +78,9 @@ wss.on('connection', function (client) {
 
                 case 'send_message':
                     sendMessage(client, client_msg.content);
-                    break;
-
-                case 'update_chat':
                     updateChat(client);
                     break;
+
             }
 
     });
@@ -123,7 +121,7 @@ function createRoom(client, client_msg){
 function repeatedRoom(){
     var msg = {
         'msg_type': 'create_room',
-        'status': 'repeated'
+        'status': 'ERROR'
     }
     client.send(JSON.stringify(msg));
 }
@@ -153,6 +151,7 @@ function listRooms(client){
     }
     var msg = {
         'msg_type': 'room_list',
+        'status': 'OK',
         'rooms': room_ids
     };
     JSON.stringify(msg);
@@ -201,7 +200,7 @@ function updateClients(room) {
 function sendMessage(client, cl_message) {
     for(var i=0; i<room_list.length;i++) {
         if (room_list[i].id === client.room.id) {
-            room_list[i].chat_messages.push([client.id, cl_message]);
+            room_list[i].chat_messages.push([client.nickname, cl_message]);
         }
     }
         var msg = {
@@ -218,8 +217,7 @@ function updateChat(client) {
         if (room_list[i].id === client.room.id) {
             var msg = {
                 'msg_type': 'update_chat',
-                'status': 'OK',
-                'data': room_list[i].chat_messages
+                'content': room_list[i].chat_messages
             };
             for(var j = 0; j<room_list[i].clients.length; j++){
                 if (room_list[i].clients[j].nickname !== client.nickname){
@@ -228,6 +226,4 @@ function updateChat(client) {
             }
         }
     }
-
-
 }

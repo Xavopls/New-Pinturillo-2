@@ -1,3 +1,5 @@
+
+/*
 function recieveMessage(author_id, msg) {
 	var message = JSON.parse(msg);
 
@@ -57,7 +59,8 @@ function recieveMessage(author_id, msg) {
 	}
 }
 
-
+}
+*/
 
 //Escucha de tecla de "Enter" en input de "message"
 var input_message = document.querySelector('#message');
@@ -65,7 +68,8 @@ input_message.addEventListener("keypress", function (e) {
 	if (e.keyCode == '13') {
 		sendChatMessage();
 	}
-})}
+});
+
 
 //Escucha de boton Send
 var send_button = document.querySelector("#send");
@@ -121,16 +125,22 @@ function on_message_sent(msg) {
 		break;
 	}
 }
-/*
+
+
+function receiveMessage(msg) {
+	var data = JSON.parse(msg.data);
+
 	var div1 = document.createElement("div");
 	var div2 = document.createElement("div");
-
-	p.innerHTML = '<b style="color:#' + client.color + '">' + client.nickname + ':</b><br>' + msg.content;
+	var p = document.createElement("p");
+	var nickname = data.content[data.content.length-1][0]
+	var message_received = data.content[data.content.length-1][1]
+	p.innerHTML = '<b' + '>' + nickname + ':</b><br>' + message_received;
 
 	div1.className = "received_msg";
 	div1.appendChild(p);
 
-	dliv2.className = "received_withd_msg";
+	div2.className = "received_withd_msg";
 	div2.appendChild(div1);
 	document.querySelector("#messages").appendChild(div2);
 
@@ -144,6 +154,4 @@ function on_message_sent(msg) {
 
 	var messages = document.querySelector('#messages');
 	messages.scrollTop = messages.scrollHeight; //Fuerza scroll del chat a estar siempre "bajado"
-
-	*/
-
+}
